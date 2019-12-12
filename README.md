@@ -8,9 +8,9 @@ The current tracking system is clunky, unintuitive and generally, not very user 
 
 This project will use the following technologies:
 
-# HTML5
-# CSS
-# JavaScript
-# React
-# C#
-# .NET Core
+- HTML5
+- CSS
+- JavaScript
+- React
+- C#
+- .NET Core
