@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import TeacherPage from './pages/TeacherPage'
+import TeacherAdminPage from './pages/TeacherAdminpage'
 import ClassroomPage from './pages/ClassroomPage'
 import StudentPage from './pages/StudentPage'
 import NotFound from './pages/NotFound'
@@ -16,18 +17,22 @@ const App = () => {
               <Link to="/">Teacher</Link>
             </li>
             <li>
-              <Link to="/1">Classroom</Link>
+              <Link to="/1">Teacher Admin</Link>
             </li>
             <li>
-              <Link to="/2">Student</Link>
+              <Link to="/2">Classroom</Link>
+            </li>
+            <li>
+              <Link to="/3">Student</Link>
             </li>
           </ul>
         </nav>
       </header>
       <Switch>
         <Route exact path="/" component={TeacherPage}></Route>
-        <Route exact path="/1" component={ClassroomPage}></Route>
-        <Route exact path="/2" component={StudentPage}></Route>
+        <Route exact path="/1" component={TeacherAdminPage}></Route>
+        <Route exact path="/2" component={ClassroomPage}></Route>
+        <Route exact path="/3" component={StudentPage}></Route>
         <Route path="*" component={NotFound}></Route>
       </Switch>
     </Router>

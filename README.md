@@ -12,5 +12,6 @@ This project will use the following technologies:
 - CSS
 - JavaScript
 - React
+- React Router
 - C#
 - .NET Core
