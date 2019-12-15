@@ -11,6 +11,10 @@ const App = () => {
   return (
     <Router>
       <header>
+        <img
+          src="https://1000logos.net/wp-content/uploads/2018/08/Hogwarts-Logo.png"
+          alt="hogwarts logo"
+        />
         <h1>Hogwarts School of Witchcraft and Wizardry</h1>
         <nav className="appNav">
           <ul className="appUl">
@@ -32,6 +36,7 @@ const App = () => {
           </ul>
         </nav>
       </header>
+      <hr />
       <Switch>
         <Route exact path="/" component={HomePage}></Route>
         <Route exact path="/1" component={TeacherPage}></Route>

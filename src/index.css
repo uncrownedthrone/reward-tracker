@@ -29,13 +29,20 @@ header {
   background-color: #92140c;
 }
 
+img {
+  margin-top: 0.5rem;
+  height: 120px;
+  margin-left: -3rem;
+}
+
 .appNav {
   display: flex;
   align-self: center;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  margin-left: -2rem;
 }
 
 .appLi {
@@ -44,10 +51,23 @@ h1 {
   font-size: 1rem;
 }
 
+.teacherPageLi {
+  list-style-type: circle;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
 .appUl {
   list-style: none;
   display: flex;
   flex-direction: row;
+}
+
+hr {
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  margin-top: -0.5rem;
+  box-shadow: 1px 1px 8px;
 }
 
 a,
@@ -68,6 +88,7 @@ section {
   margin: 1rem;
   background-color: #111d4a;
   border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 button {
@@ -82,6 +103,15 @@ th,
 tr,
 td {
   font-size: 1.25rem;
-  border: 1px solid white;
   padding: 0.5rem;
+  text-align: center;
+}
+
+table {
+  border: 1px solid #fff8f0;
+  border-radius: 5px;
+}
+
+th {
+  border-bottom: 1px solid #fff8f0;
 }

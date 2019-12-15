@@ -4,7 +4,7 @@ const StudentPageComp = () => {
   return (
     <>
       <section>
-        <h2>Harry Potter -- 55 House Points</h2>
+        <h2>Harry Potter -- 55 Hogwarts Points</h2>
         <ul>
           <li>Period 1 - 10 McGonagall's Moola</li>
           <li>Period 2 - 5 Snape's Stock</li>
