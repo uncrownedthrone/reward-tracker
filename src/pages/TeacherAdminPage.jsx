@@ -1,8 +1,8 @@
 import React from 'react'
-import TeacherAdminPage from '../components/TeacherAdminpageComp'
+import TeacherAdminPageComp from '../components/TeacherAdminPageComp'
 
-const TeacherAdminpage = () => {
-  return <TeacherAdminPage />
+const TeacherAdminPage = () => {
+  return <TeacherAdminPageComp />
 }
 
 export default TeacherAdminPage

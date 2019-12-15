@@ -2,6 +2,13 @@
   font: 16px / 1 sans-serif;
 }
 
+/* colors to use
+#1E1E24
+#92140C
+#FFF8F0
+#FFCF99
+#111D4A */
+
 html {
   height: 100%;
 }
@@ -10,4 +17,71 @@ body {
   margin: 0;
   min-height: 100%;
   font-family: 'Source Sans Pro', sans-serif;
+  background-color: #fff8f0;
+}
+
+header {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #92140c;
+}
+
+.appNav {
+  display: flex;
+  align-self: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.appLi {
+  list-style: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.appUl {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+a,
+a:visited {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+section {
+  color: white;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #111d4a;
+  border-radius: 5px;
+}
+
+button {
+  font-size: 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-radius: 5px;
+  background-color: #fff8f0;
+  outline: none;
+}
+
+th,
+tr,
+td {
+  font-size: 1.25rem;
+  border: 1px solid white;
+  padding: 0.5rem;
 }

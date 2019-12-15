@@ -11,22 +11,22 @@ const App = () => {
   return (
     <Router>
       <header>
-        <h1>American High School</h1>
-        <nav>
-          <ul>
-            <li>
+        <h1>Hogwarts School of Witchcraft and Wizardry</h1>
+        <nav className="appNav">
+          <ul className="appUl">
+            <li className="appLi">
               <Link to="/">Home</Link>
             </li>
-            <li>
+            <li className="appLi">
               <Link to="/1">Teacher</Link>
             </li>
-            <li>
+            <li className="appLi">
               <Link to="/2">Teacher Admin</Link>
             </li>
-            <li>
+            <li className="appLi">
               <Link to="/3">Classroom</Link>
             </li>
-            <li>
+            <li className="appLi">
               <Link to="/4">Student</Link>
             </li>
           </ul>
