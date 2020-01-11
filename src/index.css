@@ -51,8 +51,9 @@ h1 {
   font-size: 1rem;
 }
 
-.teacherPageLi {
-  list-style-type: circle;
+.teacherPageButton {
+  display: flex;
+  margin: 0.5rem;
   padding: 0.5rem;
   font-size: 1rem;
 }
