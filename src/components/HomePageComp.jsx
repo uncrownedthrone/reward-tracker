@@ -18,12 +18,12 @@ const HomePage = () => {
           and Slytherin, the values of being sly and cunning.
         </p>
         <h2>How to Use</h2>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum
-          accusamus facere aspernatur id sunt similique quo, molestias suscipit
-          corrupti consequuntur distinctio rem qui! Eum aliquid, magnam unde
-          expedita numquam amet.
-        </p>
+        <ul className="homePageUl">
+          <li className="homePageLi">Create a Classroom</li>
+          <li className="homePageLi">Create a Currency</li>
+          <li className="homePageLi">Add Students</li>
+          <li className="homePageLi">Add/Redeem Currency</li>
+        </ul>
       </section>
     </>
   )

@@ -4,22 +4,24 @@ const TeacherAdminPageComp = () => {
   return (
     <>
       <section>
-        <h2>Period 1 - Transfiguration 1</h2>
-      </section>
-      <section>
-        <h2>Period 2 - Transfiguration 1</h2>
-      </section>
-      <section>
-        <h2>Period 3 - Transfiguration 1</h2>
-      </section>
-      <section>
-        <h2>Period 5 - Transfiguration 1 Honors</h2>
-      </section>
-      <section>
-        <h2>Period 6 - Transfiguration 1 Honors</h2>
-      </section>
-      <section>
-        <h2>Period 8 - Transfiguration 1 Honors</h2>
+        <button className="teacherAdminPageButton">
+          Period 1 - Transfiguration 1
+        </button>
+        <button className="teacherAdminPageButton">
+          Period 2 - Transfiguration 1
+        </button>
+        <button className="teacherAdminPageButton">
+          Period 3 - Transfiguration 1
+        </button>
+        <button className="teacherAdminPageButton">
+          Period 5 - Transfiguration 1 Honors
+        </button>
+        <button className="teacherAdminPageButton">
+          Period 6 - Transfiguration 1 Honors
+        </button>
+        <button className="teacherAdminPageButton">
+          Period 8 - Transfiguration 1 Honors
+        </button>
       </section>
     </>
   )

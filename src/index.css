@@ -18,6 +18,7 @@ body {
   min-height: 100%;
   font-family: 'Source Sans Pro', sans-serif;
   background-color: #fff8f0;
+  text-align: center;
 }
 
 header {
@@ -51,17 +52,29 @@ h1 {
   font-size: 1rem;
 }
 
-.teacherPageButton {
-  display: flex;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  font-size: 1rem;
-}
-
 .appUl {
   list-style: none;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+}
+
+.homePageUl {
+  display: flex;
+  flex-direction: column;
+}
+
+.homePageLi {
+  text-align: left;
+}
+
+.teacherPageButton,
+.teacherAdminPageButton {
+  display: flex;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  justify-content: center;
 }
 
 hr {
@@ -90,14 +103,21 @@ section {
   background-color: #111d4a;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 button {
+  display: flex;
   font-size: 1rem;
   font-family: 'Source Sans Pro', sans-serif;
   border-radius: 5px;
   background-color: #fff8f0;
   outline: none;
+  width: 250px;
+  justify-content: center;
 }
 
 th,
@@ -115,4 +135,42 @@ table {
 
 th {
   border-bottom: 1px solid #fff8f0;
+}
+
+.studentPageUl {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .appNav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  section {
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #111d4a;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .appLi {
+    list-style: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  .appUl {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
