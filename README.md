@@ -14,4 +14,5 @@ This project will use the following technologies:
 - React
 - React Router
 - C#
+- PostgreSQL
 - .NET Core
