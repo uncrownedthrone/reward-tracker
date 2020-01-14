@@ -3,23 +3,20 @@ import React from 'react'
 const StudentComp = () => {
   return (
     <>
-      <section class="wrap-collabsible">
+      <div class="wrap-collabsible">
         <input id="collapsible" className="toggle" type="checkbox" />
         <label for="collapsible" className="lbl-toggle">
-          STUDENT
+          Harry Potter
         </label>
         <div class="collapsible-content">
           <div class="content-inner">
-            <p>
-              QUnit is by calling one of the object that are embedded in
-              JavaScript, and faster JavaScript program could also used with its
-              elegant, well documented, and functional programming using JS,
-              HTML pages Modernizr is a popular browsers without plug-ins.
-              Test-Driven Development.
-            </p>
+            <button>test 1</button>
+            <p>test 2</p>
+            <p>test 3</p>
+            <button>test 4</button>
           </div>
         </div>
-      </section>
+      </div>
     </>
   )
 }

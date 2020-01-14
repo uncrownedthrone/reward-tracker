@@ -122,15 +122,17 @@ input[type='checkbox'] {
   display: block;
 
   font-weight: bold;
-  font-family: monospace;
+  font-family: 'Source Sans Pro', sans-serif;
+
   font-size: 1.2rem;
   text-transform: uppercase;
   text-align: center;
 
   padding: 1rem;
 
-  color: #a77b0e;
-  background: #fae042;
+  color: white;
+  background: #111d4a;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2), 0px 0px 10px 0px white;
 
   cursor: pointer;
 
@@ -138,7 +140,7 @@ input[type='checkbox'] {
   transition: all 0.25s ease-out;
 }
 .lbl-toggle:hover {
-  color: #7c5a0b;
+  color: darkgray;
 }
 
 .lbl-toggle::before {
@@ -157,11 +159,10 @@ input[type='checkbox'] {
 }
 
 .collapsible-content .content-inner {
-  background: rgba(250, 224, 66, 0.2);
-  border-bottom: 1px solid rgba(250, 224, 66, 0.45);
+  background: darkgray;
 
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   padding: 0.5rem 1rem;
 }
 
@@ -181,9 +182,10 @@ input[type='checkbox'] {
   color: white;
   padding: 1rem;
   margin: 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
+
   background-color: #111d4a;
   border-radius: 5px;
-  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2), 0px 0px 10px 0px white;
   display: flex;
   justify-content: center;
   flex-direction: column;
