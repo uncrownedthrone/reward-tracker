@@ -5,6 +5,7 @@ import TeacherPage from './pages/TeacherPage'
 import TeacherAdminPage from './pages/TeacherAdminPage'
 import ClassroomPage from './pages/ClassroomPage'
 import StudentPage from './pages/StudentPage'
+import NewClassroomPage from './pages/NewClassroomPage'
 import NotFound from './pages/NotFound'
 
 const App = () => {
@@ -22,16 +23,19 @@ const App = () => {
               <Link to="/">Home</Link>
             </li>
             <li className="appLi">
-              <Link to="/1">Teacher</Link>
+              <Link to="/teacher">Teacher</Link>
             </li>
             <li className="appLi">
-              <Link to="/2">Teacher Admin</Link>
+              <Link to="/classroom">Classroom</Link>
             </li>
             <li className="appLi">
-              <Link to="/3">Classroom</Link>
+              <Link to="/student">Student</Link>
             </li>
             <li className="appLi">
-              <Link to="/4">Student</Link>
+              <Link to="/teacheradmin">Teacher Admin</Link>
+            </li>
+            <li className="appLi">
+              <Link to="/newclassroom">New Classroom</Link>
             </li>
           </ul>
         </nav>
@@ -39,10 +43,11 @@ const App = () => {
       <hr />
       <Switch>
         <Route exact path="/" component={HomePage}></Route>
-        <Route exact path="/1" component={TeacherPage}></Route>
-        <Route exact path="/2" component={TeacherAdminPage}></Route>
-        <Route exact path="/3" component={ClassroomPage}></Route>
-        <Route exact path="/4" component={StudentPage}></Route>
+        <Route exact path="/teacher" component={TeacherPage}></Route>
+        <Route exact path="/teacheradmin" component={TeacherAdminPage}></Route>
+        <Route exact path="/classroom" component={ClassroomPage}></Route>
+        <Route exact path="/student" component={StudentPage}></Route>
+        <Route exact path="/newclassroom" component={NewClassroomPage}></Route>
         <Route path="*" component={NotFound}></Route>
       </Switch>
     </Router>

@@ -21,6 +21,11 @@ body {
   text-align: center;
 }
 
+input {
+  margin: 0.5rem;
+  width: auto;
+}
+
 header {
   color: white;
   display: flex;
@@ -109,15 +114,32 @@ section {
   align-items: center;
 }
 
+.studentComp {
+  border: 1px solid white;
+  color: white;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #111d4a;
+  border-radius: 5px;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2), 0px 0px 10px 0px white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 button {
   display: flex;
+  border: 1px solid white;
   font-size: 1rem;
   font-family: 'Source Sans Pro', sans-serif;
   border-radius: 5px;
-  background-color: #fff8f0;
+  background-color: #111d4a;
+  color: white;
   outline: none;
   width: 250px;
   justify-content: center;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2), 0px 0px 10px 0px white;
 }
 
 th,
@@ -141,6 +163,10 @@ th {
   display: flex;
   flex-direction: column;
   list-style: none;
+}
+
+input {
+  text-align: center;
 }
 
 @media (max-width: 768px) {
