@@ -1,7 +1,7 @@
 import React from 'react'
 import StudentComp from './StudentComp'
 
-const ClassroomPageComp = () => {
+const PeriodPageComp = () => {
   return (
     <>
       <section>
@@ -12,4 +12,4 @@ const ClassroomPageComp = () => {
   )
 }
 
-export default ClassroomPageComp
+export default PeriodPageComp

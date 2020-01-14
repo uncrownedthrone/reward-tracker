@@ -121,11 +121,9 @@ input[type='checkbox'] {
 .lbl-toggle {
   display: block;
 
-  font-weight: bold;
   font-family: 'Source Sans Pro', sans-serif;
 
   font-size: 1.2rem;
-  text-transform: uppercase;
   text-align: center;
 
   padding: 1rem;
@@ -137,7 +135,7 @@ input[type='checkbox'] {
   cursor: pointer;
 
   border-radius: 5px;
-  transition: all 0.25s ease-out;
+  transition: all 0.25s ease-in-out;
 }
 .lbl-toggle:hover {
   color: gray;
@@ -147,15 +145,11 @@ input[type='checkbox'] {
   content: ' ';
   display: inline-block;
 
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 5px solid currentColor;
-
   vertical-align: middle;
   margin-right: 0.7rem;
   transform: translateY(-2px);
 
-  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-in-out;
 }
 
 .collapsible-content .content-inner {
@@ -164,6 +158,9 @@ input[type='checkbox'] {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .toggle:checked + .lbl-toggle + .collapsible-content {
@@ -194,15 +191,17 @@ input[type='checkbox'] {
 .collapseButton {
   box-shadow: none;
   margin: 0.5rem;
-  width: 300px;
+  width: 200px;
   padding: 0.25rem;
+  border-radius: 5px;
 }
 
 .collapseText {
   margin: 0.5rem;
-  width: 200px;
+  width: 190px;
   padding: 0.25rem;
   font-size: 1rem;
+  border-radius: 5px;
 }
 
 button {
@@ -227,6 +226,7 @@ button {
 
 input {
   text-align: center;
+  font-size: 1rem;
 }
 
 @media (max-width: 768px) {

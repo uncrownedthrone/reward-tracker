@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NewClassroomPageComp = () => {
+const NewPeriodPageComp = () => {
   return (
     <>
       <section className="newClassCompSection">
@@ -18,4 +18,4 @@ const NewClassroomPageComp = () => {
   )
 }
 
-export default NewClassroomPageComp
+export default NewPeriodPageComp

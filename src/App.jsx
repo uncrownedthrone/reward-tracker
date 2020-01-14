@@ -1,10 +1,9 @@
 import React from 'react'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import HomePage from './pages/HomePage'
-import TeacherPage from './pages/AllPeriodsPage'
-import ClassroomPage from './pages/ClassroomPage'
+import PeriodPage from './pages/PeriodPage'
 import StudentPage from './pages/StudentPage'
-import NewClassroomPage from './pages/NewClassroomPage'
+import NewPeriodPage from './pages/NewPeriodPage'
 import NotFound from './pages/NotFound'
 import AllPeriodsPage from './pages/AllPeriodsPage'
 
@@ -41,12 +40,12 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={HomePage}></Route>
         <Route exact path="/allperiods" component={AllPeriodsPage}></Route>
-        <Route exact path="/period" component={ClassroomPage}></Route>
+        <Route exact path="/period" component={PeriodPage}></Route>
         <Route exact path="/student" component={StudentPage}></Route>
-        <Route exact path="/newperiod" component={NewClassroomPage}></Route>
+        <Route exact path="/newperiod" component={NewPeriodPage}></Route>
         <Route path="*" component={NotFound}></Route>
       </Switch>
-      <footer>❾¾</footer>
+      <footer>Made on Platform ❾¾</footer>
     </Router>
   )
 }

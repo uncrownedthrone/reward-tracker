@@ -1,0 +1,28 @@
+public class Teacher
+  {
+    public int Id { get; set; }
+  }
+
+public class Classroom
+  {
+    public int Id { get; set; }
+    public int TeacherId { get; set; }
+    public Teacher Teacher { get; set; }
+    public List<Student> Students { get; set; } = new List<Student>();
+  }
+
+public class Rewards
+  {
+    public int Id { get; set; }
+    public int TeacherId { get; set; }
+    public int StudentId { get; set; }
+    public Student Student { get; set; }
+    public Teacher Teacher { get; set; }
+  }
+
+public class Student
+  {
+    public int Id { get; set; }
+    public int ClassroomId { get; set; }
+    public Classroom Classroom { get; set; }
+  }
