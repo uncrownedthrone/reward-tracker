@@ -10,10 +10,18 @@ const StudentComp = () => {
         </label>
         <div class="collapsible-content">
           <div class="content-inner">
-            <p>test 2</p>
-            <p>test 3</p>
-            <input type="text" placeholder="test4" />
-            <button>SUBMIT</button>
+            <button className="collapseButton">ADD 1</button>
+            <button className="collapseButton">ADD 3</button>
+            <button className="collapseButton">ADD 5</button>
+            <button className="collapseButton">REDEEM 1</button>
+            <button className="collapseButton">REDEEM 3</button>
+            <button className="collapseButton">REDEEM 5</button>
+            <input
+              className="collapseText"
+              type="text"
+              placeholder="ADD/REDEEM Reason"
+            />
+            <button className="collapseButton">Submit</button>
           </div>
         </div>
       </div>

@@ -1,11 +1,12 @@
 import React from 'react'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import HomePage from './pages/HomePage'
-import TeacherPage from './pages/TeacherPage'
+import TeacherPage from './pages/AllPeriodsPage'
 import ClassroomPage from './pages/ClassroomPage'
 import StudentPage from './pages/StudentPage'
 import NewClassroomPage from './pages/NewClassroomPage'
 import NotFound from './pages/NotFound'
+import AllPeriodsPage from './pages/AllPeriodsPage'
 
 const App = () => {
   return (
@@ -22,16 +23,16 @@ const App = () => {
               <Link to="/">Home</Link>
             </li>
             <li className="appLi">
-              <Link to="/teacher">Teacher</Link>
+              <Link to="/allperiods">All Periods</Link>
             </li>
             <li className="appLi">
-              <Link to="/classrooms">Classrooms</Link>
+              <Link to="/period">One Period</Link>
             </li>
             <li className="appLi">
-              <Link to="/student">Student</Link>
+              <Link to="/student">One Student</Link>
             </li>
             <li className="appLi">
-              <Link to="/newclassroom">New Classroom</Link>
+              <Link to="/newperiod">New Period</Link>
             </li>
           </ul>
         </nav>
@@ -39,12 +40,13 @@ const App = () => {
       <hr />
       <Switch>
         <Route exact path="/" component={HomePage}></Route>
-        <Route exact path="/teacher" component={TeacherPage}></Route>
-        <Route exact path="/classrooms" component={ClassroomPage}></Route>
+        <Route exact path="/allperiods" component={AllPeriodsPage}></Route>
+        <Route exact path="/period" component={ClassroomPage}></Route>
         <Route exact path="/student" component={StudentPage}></Route>
-        <Route exact path="/newclassroom" component={NewClassroomPage}></Route>
+        <Route exact path="/newperiod" component={NewClassroomPage}></Route>
         <Route path="*" component={NotFound}></Route>
       </Switch>
+      <footer>❾¾</footer>
     </Router>
   )
 }

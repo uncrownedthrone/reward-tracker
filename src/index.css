@@ -191,6 +191,20 @@ input[type='checkbox'] {
   align-items: center;
 }
 
+.collapseButton {
+  box-shadow: none;
+  margin: 0.5rem;
+  width: 300px;
+  padding: 0.25rem;
+}
+
+.collapseText {
+  margin: 0.5rem;
+  width: 200px;
+  padding: 0.25rem;
+  font-size: 1rem;
+}
+
 button {
   display: flex;
   font-size: 1rem;

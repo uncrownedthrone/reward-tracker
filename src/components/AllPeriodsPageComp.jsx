@@ -1,22 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const TeacherPage = () => {
+const AllPeriodsPageComp = () => {
   return (
     <>
       <section>
         <h2>McGonagall's Moola - All Periods</h2>
         <button className="teacherPageButton">
-          <Link to="/classrooms">Transfiguration 1</Link>
+          <Link to="/period">Period 1 - Transfiguration 1</Link>
         </button>
       </section>
       <section>
         <button className="teacherPageButton">
-          <Link to="/newclassroom">Add New Period +</Link>
+          <Link to="/newperiod">Add New Period +</Link>
         </button>
       </section>
     </>
   )
 }
 
-export default TeacherPage
+export default AllPeriodsPageComp

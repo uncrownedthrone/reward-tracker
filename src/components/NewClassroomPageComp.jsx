@@ -4,15 +4,15 @@ const NewClassroomPageComp = () => {
   return (
     <>
       <section className="newClassCompSection">
-        <h2>Create a New Classroom</h2>
-        <p>What period?</p>
+        <h2>Create a New Period</h2>
+        <p>What's the period number?</p>
         <input type="number" placeholder="Period Number" />
-        <p>What is the subject?</p>
-        <input type="text" placeholder="Class Subject" />
-        <p>Please choose students below to add to your classroom:</p>
+        <p>What's the subject?</p>
+        <input type="text" placeholder="Subject" />
+        <p>Please choose students below to add to this period:</p>
         <p>STUDENT 1</p>
         <p>STUDENT 2</p>
-        <button>Create Classroom</button>
+        <button>Create Period</button>
       </section>
     </>
   )
