@@ -23,7 +23,6 @@ body {
 
 input {
   margin: 0.5rem;
-  width: auto;
 }
 
 header {
@@ -80,13 +79,14 @@ h1 {
   padding: 0.5rem;
   font-size: 1rem;
   justify-content: center;
+  cursor: pointer;
 }
 
 hr {
   border: 2px solid rgba(0, 0, 0, 0.5);
   margin-bottom: 1rem;
   margin-top: -0.5rem;
-  box-shadow: 1px 1px 8px;
+  box-shadow: 1px 1px 10px;
 }
 
 a,
@@ -136,11 +136,12 @@ input[type='checkbox'] {
 
   cursor: pointer;
 
-  border-radius: 7px;
+  /* border: 1px solid white; */
+  border-radius: 5px;
   transition: all 0.25s ease-out;
 }
 .lbl-toggle:hover {
-  color: darkgray;
+  color: gray;
 }
 
 .lbl-toggle::before {
@@ -159,7 +160,7 @@ input[type='checkbox'] {
 }
 
 .collapsible-content .content-inner {
-  background: darkgray;
+  background: #92140c;
 
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -204,23 +205,7 @@ button {
   width: 250px;
   justify-content: center;
   box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2), 0px 0px 10px 0px white;
-}
-
-th,
-tr,
-td {
-  font-size: 1.25rem;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-table {
-  border: 1px solid #fff8f0;
-  border-radius: 5px;
-}
-
-th {
-  border-bottom: 1px solid #fff8f0;
+  cursor: pointer;
 }
 
 .studentPageUl {
