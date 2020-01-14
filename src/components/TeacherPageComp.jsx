@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const TeacherPage = () => {
   return (
@@ -6,11 +7,13 @@ const TeacherPage = () => {
       <section>
         <h2>McGonagall's Moola - All Periods</h2>
         <button className="teacherPageButton">
-          Period 1 - Transfiguration 1
+          <Link to="/classrooms">Transfiguration 1</Link>
         </button>
       </section>
       <section>
-        <button className="teacherPageButton">Add New Period +</button>
+        <button className="teacherPageButton">
+          <Link to="/newclassroom">Add New Period +</Link>
+        </button>
       </section>
     </>
   )

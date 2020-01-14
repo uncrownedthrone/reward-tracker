@@ -20,7 +20,6 @@ const HomePage = () => {
         <h2>How to Use</h2>
         <ul className="homePageUl">
           <li className="homePageLi">Create a Classroom</li>
-          <li className="homePageLi">Create a Currency</li>
           <li className="homePageLi">Add Students</li>
           <li className="homePageLi">Add/Redeem Currency</li>
         </ul>

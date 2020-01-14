@@ -2,7 +2,6 @@ import React from 'react'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import TeacherPage from './pages/TeacherPage'
-import TeacherAdminPage from './pages/TeacherAdminPage'
 import ClassroomPage from './pages/ClassroomPage'
 import StudentPage from './pages/StudentPage'
 import NewClassroomPage from './pages/NewClassroomPage'
@@ -26,13 +25,10 @@ const App = () => {
               <Link to="/teacher">Teacher</Link>
             </li>
             <li className="appLi">
-              <Link to="/classroom">Classroom</Link>
+              <Link to="/classrooms">Classrooms</Link>
             </li>
             <li className="appLi">
               <Link to="/student">Student</Link>
-            </li>
-            <li className="appLi">
-              <Link to="/teacheradmin">Teacher Admin</Link>
             </li>
             <li className="appLi">
               <Link to="/newclassroom">New Classroom</Link>
@@ -44,8 +40,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={HomePage}></Route>
         <Route exact path="/teacher" component={TeacherPage}></Route>
-        <Route exact path="/teacheradmin" component={TeacherAdminPage}></Route>
-        <Route exact path="/classroom" component={ClassroomPage}></Route>
+        <Route exact path="/classrooms" component={ClassroomPage}></Route>
         <Route exact path="/student" component={StudentPage}></Route>
         <Route exact path="/newclassroom" component={NewClassroomPage}></Route>
         <Route path="*" component={NotFound}></Route>
