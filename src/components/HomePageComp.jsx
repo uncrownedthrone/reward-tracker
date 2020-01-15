@@ -4,7 +4,7 @@ const HomePage = () => {
   return (
     <>
       <section>
-        <h2>Welcome Professor McGonagall!</h2>
+        <h2>Welcome, Professor McGonagall!</h2>
         <p>
           At some point in the tenth century, four of the greatest witches and
           wizards that ever lived founded Hogwarts School of Witchcraft and
