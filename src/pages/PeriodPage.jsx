@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import PeriodPageComp from '../components/PeriodPageComp'
 import axios from 'axios'
 
-const ClassroomPage = props => {
+const PeriodPage = props => {
   const [period, setPeriod] = useState({})
 
   const getPeriod = async () => {
@@ -26,4 +26,4 @@ const ClassroomPage = props => {
   )
 }
 
-export default ClassroomPage
+export default PeriodPage
