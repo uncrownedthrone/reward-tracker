@@ -9,10 +9,6 @@ const NewPeriodPageComp = () => {
   const [classroomId, setClassroomId] = useState()
   const [periodNumber, setPeriodNumber] = useState('')
   const [subject, setSubject] = useState('')
-  const [
-    wasClassroomCreatedSuccessfully,
-    setWasClassroomCreatedSuccessfully,
-  ] = useState(false)
 
   const getClassroom = async props => {
     const resp = await axios.get(
@@ -40,14 +36,9 @@ const NewPeriodPageComp = () => {
 
   useEffect(() => {
     getTeachers()
-    if (classroomId) {
-      setWasClassroomCreatedSuccessfully(true)
-    }
-  }, [classroomId])
+  }, [])
 
-  return wasClassroomCreatedSuccessfully ? (
-    <Redirect to={`/period/${classroomId}`} />
-  ) : (
+  return (
     <>
       <section className="newClassCompSection">
         <h2>Create a New Period</h2>
