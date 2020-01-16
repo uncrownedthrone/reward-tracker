@@ -1,12 +1,12 @@
 import React from 'react'
-import StudentComp from './StudentComp'
 
-const PeriodPageComp = () => {
+const PeriodPageComp = props => {
   return (
     <>
       <section>
-        <h2>Period 1 - Transfiguration 1</h2>
-        <StudentComp />
+        <h2>
+          Period {props.periodNumber} - Subject - {props.subject}
+        </h2>
       </section>
     </>
   )
