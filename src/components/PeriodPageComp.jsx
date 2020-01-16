@@ -1,5 +1,5 @@
 import React from 'react'
-import StudentComp from './StudentComp'
+import StudentPageComp from './StudentPageComp'
 
 const PeriodPageComp = props => {
   return (
@@ -8,7 +8,7 @@ const PeriodPageComp = props => {
         <h2>
           Period {props.periodNumber} - {props.subject}
         </h2>
-        <StudentComp />
+        <StudentPageComp />
       </section>
     </>
   )

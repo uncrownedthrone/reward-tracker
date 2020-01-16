@@ -1,5 +1,5 @@
 import React from 'react'
-import StudentPageComp from '../components/StudentPageComp'
+import StudentPageComp from '../components/OneStudentComp'
 
 const HomePage = () => {
   return <StudentPageComp />

@@ -3,17 +3,32 @@ import React from 'react'
 const StudentPageComp = () => {
   return (
     <>
-      <section>
-        <h2>Harry Potter -- 55 Hogwarts Points</h2>
-        <ul className="studentPageUl">
-          <li className="studentPageLi">Period 1 - 10 McGonagall's Moola</li>
-          <li className="studentPageLi">Period 2 - 5 Snape's Stock</li>
-          <li className="studentPageLi">Period 3 - 5 Hagrid's Half Sheets</li>
-          <li className="studentPageLi">Period 5 - 10 Sprout's Shillings</li>
-          <li className="studentPageLi">Period 6 - 10 Flitwick's Fivers</li>
-          <li className="studentPageLi">Period 8 - 15 Moody's Millions</li>
-        </ul>
-      </section>
+      <div class="wrap-collabsible">
+        <input id="collapsible" className="toggle" type="checkbox" />
+        <label for="collapsible" className="lbl-toggle">
+          Harry Potter
+        </label>
+        <div class="collapsible-content">
+          <div class="content-inner">
+            <div className="addButtons">
+              <button className="addCollapseButton">ADD 1</button>
+              <button className="addCollapseButton">ADD 3</button>
+              <button className="addCollapseButton">ADD 5</button>
+            </div>
+            <div className="redeemButtons">
+              <button className="redeemCollapseButton">REDEEM 1</button>
+              <button className="redeemCollapseButton">REDEEM 3</button>
+              <button className="redeemCollapseButton">REDEEM 5</button>
+            </div>
+            <input
+              className="collapseText"
+              type="text"
+              placeholder="ADD/REDEEM Reason"
+            />
+            <button className="collapseButton">Submit</button>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
