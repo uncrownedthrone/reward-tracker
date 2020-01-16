@@ -6,6 +6,7 @@ import StudentPage from './pages/StudentPage'
 import NewPeriodPage from './pages/NewPeriodPage'
 import NotFound from './pages/NotFound'
 import AllPeriodsPage from './pages/AllPeriodsPage'
+import TestPage from './pages/TestPage'
 
 const App = () => {
   return (
@@ -33,6 +34,9 @@ const App = () => {
             <li className="appLi">
               <Link to="/newperiod">New Period</Link>
             </li>
+            <li className="appLi">
+              <Link to="/test">Test Page</Link>
+            </li>
           </ul>
         </nav>
       </header>
@@ -43,6 +47,7 @@ const App = () => {
         <Route exact path="/period" component={PeriodPage}></Route>
         <Route exact path="/student" component={StudentPage}></Route>
         <Route exact path="/newperiod" component={NewPeriodPage}></Route>
+        <Route exact path="/test" component={TestPage}></Route>
         <Route path="*" component={NotFound}></Route>
       </Switch>
       <footer>Made on Platform ❾¾</footer>
