@@ -38,7 +38,6 @@ const NewPeriodPageComp = () => {
         teacherId: parseInt(teacherId),
       })
       if (resp.status === 201) {
-        console.log(resp.data)
         setPeriodId(resp.data.id)
       }
     }
@@ -51,7 +50,6 @@ const NewPeriodPageComp = () => {
 
   useEffect(() => {
     getTeachers()
-    console.log({ periodId })
     if (periodId) {
       setWasPeriodCreatedSuccessfully(true)
     }

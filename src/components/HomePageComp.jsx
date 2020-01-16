@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const HomePage = () => {
   return (
@@ -17,11 +18,13 @@ const HomePage = () => {
           Ravenclaw, intelligence and wit; Hufflepuff, loyalty and fair play;
           and Slytherin, the values of being sly and cunning.
         </p>
-        <h2>How to Use</h2>
+        <h2>Choose an Action Below:</h2>
         <ul className="homePageUl">
-          <li className="homePageLi">Create a Classroom</li>
-          <li className="homePageLi">Add Students</li>
-          <li className="homePageLi">Add/Redeem Currency</li>
+          <li className="homePageLi">
+            <Link to="/period/new">Create a Classroom</Link>
+          </li>
+          <li className="homePageLi">Add/Remove Students</li>
+          <li className="homePageLi">Add/Redeem Points</li>
         </ul>
       </section>
     </>

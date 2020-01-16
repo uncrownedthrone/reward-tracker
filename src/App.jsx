@@ -4,9 +4,8 @@ import HomePage from './pages/HomePage'
 import PeriodPage from './pages/PeriodPage'
 import StudentPage from './pages/StudentPage'
 import NewPeriodPage from './pages/NewPeriodPage'
-import NotFound from './pages/NotFound'
 import AllPeriodsPage from './pages/AllPeriodsPage'
-import TestPage from './pages/TestPage'
+import NotFound from './pages/NotFound'
 
 const App = () => {
   return (
@@ -26,16 +25,7 @@ const App = () => {
               <Link to="/allperiods">All Periods</Link>
             </li>
             <li className="appLi">
-              <Link to="/period/:id">One Period</Link>
-            </li>
-            <li className="appLi">
               <Link to="/student">One Student</Link>
-            </li>
-            <li className="appLi">
-              <Link to="/period/new">New Period</Link>
-            </li>
-            <li className="appLi">
-              <Link to="/test">Test Page</Link>
             </li>
           </ul>
         </nav>
@@ -47,7 +37,6 @@ const App = () => {
         <Route exact path="/period/new" component={NewPeriodPage}></Route>
         <Route exact path="/period/:id" component={PeriodPage}></Route>
         <Route exact path="/student" component={StudentPage}></Route>
-        <Route exact path="/test" component={TestPage}></Route>
         <Route path="*" component={NotFound}></Route>
       </Switch>
       <footer>Made on Platform ❾¾</footer>
