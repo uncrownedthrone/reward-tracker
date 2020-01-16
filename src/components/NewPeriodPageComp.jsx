@@ -5,7 +5,8 @@ const NewPeriodPageComp = () => {
   const [teachers, setTeachers] = useState([])
   const [teacherId, setTeacherId] = useState()
   const [classroom, setClassroom] = useState({})
-  const [name, setName] = useState('')
+  const [periodNumber, setPeriodNumber] = useState('')
+  const [subject, setSubject] = useState('')
 
   const getClassroom = async props => {
     const resp = await axios.get(
@@ -19,12 +20,16 @@ const NewPeriodPageComp = () => {
     setTeachers(resp.data)
   }
 
-  const sendClassroomToApi = async props => {
+  const sendClassroomToApi = async () => {
     const resp = await axios.post('https://localhost:5001/api/classroom', {
       teacherId: parseInt(teacherId),
-      name,
+      periodNumber: parseInt(periodNumber),
+      subject: subject,
     })
+    console.log(resp.data)
   }
+
+  console.log(classroom)
 
   useEffect(() => {
     getTeachers()
@@ -37,15 +42,19 @@ const NewPeriodPageComp = () => {
         <p>What's the period number?</p>
         <input
           placeholder="Period Number"
-          type="text"
-          value={name}
-          onChange={e => setName(e.target.value)}
+          type="number"
+          value={periodNumber}
+          onChange={e => setPeriodNumber(e.target.value)}
         />
-        <h2>{classroom.teacherId}</h2>
         <p>What's the subject?</p>
-        <input type="text" placeholder="Subject" />
+        <input
+          type="text"
+          placeholder="Subject"
+          value={subject}
+          onChange={e => setSubject(e.target.value)}
+        />
         <select onChange={e => setTeacherId(e.target.value)}>
-          <option value="">select teacher</option>
+          <option value="">Select Teacher</option>
           {teachers.map(teacher => {
             return (
               <option key={teacher.id} value={teacher.id}>
