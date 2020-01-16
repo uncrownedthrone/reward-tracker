@@ -80,6 +80,7 @@ h1 {
   font-size: 1rem;
   justify-content: center;
   cursor: pointer;
+  border: 2px solid white;
 }
 
 hr {
@@ -188,12 +189,31 @@ input[type='checkbox'] {
   align-items: center;
 }
 
-.collapseButton {
+.addCollapseButton {
   box-shadow: none;
   margin: 0.5rem;
-  width: 200px;
+  width: 100px;
+  padding: 0.25rem;
+  border-radius: 20px;
+  color: greenyellow;
+  border: 2px solid white;
+}
+
+.redeemCollapseButton {
+  box-shadow: none;
+  margin: 0.5rem;
+  width: 100px;
   padding: 0.25rem;
   border-radius: 5px;
+  color: red;
+  border: 2px solid white;
+}
+
+.collapseButton {
+  box-shadow: none;
+  margin: 0.25rem;
+  width: 200px;
+  border: 2px solid white;
 }
 
 .collapseText {
@@ -216,6 +236,17 @@ button {
   justify-content: center;
   box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2), 0px 0px 10px 0px white;
   cursor: pointer;
+  border: 2px solid white;
+}
+
+.addButtons {
+  display: flex;
+  flex-direction: row;
+}
+
+.redeemButtons {
+  display: flex;
+  flex-direction: row;
 }
 
 .studentPageUl {

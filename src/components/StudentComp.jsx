@@ -10,14 +10,16 @@ const StudentComp = () => {
         </label>
         <div class="collapsible-content">
           <div class="content-inner">
-            <button className="collapseButton">
-              <i class="fas fa-arrow-circle-up"></i> 1
-            </button>
-            <button className="collapseButton">ADD 3</button>
-            <button className="collapseButton">ADD 5</button>
-            <button className="collapseButton">REDEEM 1</button>
-            <button className="collapseButton">REDEEM 3</button>
-            <button className="collapseButton">REDEEM 5</button>
+            <div className="addButtons">
+              <button className="addCollapseButton">ADD 1</button>
+              <button className="addCollapseButton">ADD 3</button>
+              <button className="addCollapseButton">ADD 5</button>
+            </div>
+            <div className="redeemButtons">
+              <button className="redeemCollapseButton">REDEEM 1</button>
+              <button className="redeemCollapseButton">REDEEM 3</button>
+              <button className="redeemCollapseButton">REDEEM 5</button>
+            </div>
             <input
               className="collapseText"
               type="text"
