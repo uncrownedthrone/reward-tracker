@@ -11,13 +11,11 @@ const TestPageComp = () => {
     const resp = await axios.get(
       `https://localhost:5001/api/classroom/${props.match.params.id}`
     )
-
     setClassroom(resp.data)
   }
 
   const getTeachers = async () => {
     const resp = await axios.get(`https://localhost:5001/api/teacher`)
-
     setTeachers(resp.data)
   }
 
@@ -26,7 +24,6 @@ const TestPageComp = () => {
       teacherId: parseInt(teacherId),
       name,
     })
-    console.log(resp.data)
   }
 
   useEffect(() => {
