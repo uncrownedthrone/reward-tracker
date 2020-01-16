@@ -135,7 +135,7 @@ input[type='checkbox'] {
   cursor: pointer;
 
   border-radius: 5px;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in;
 }
 .lbl-toggle:hover {
   color: gray;
@@ -149,7 +149,7 @@ input[type='checkbox'] {
   margin-right: 0.7rem;
   transform: translateY(-2px);
 
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in;
 }
 
 .collapsible-content .content-inner {
@@ -171,7 +171,7 @@ input[type='checkbox'] {
   max-height: 0px;
   overflow: hidden;
 
-  transition: max-height 0.25s ease-in-out;
+  transition: max-height 0.25s ease-in;
 }
 
 .toggle {

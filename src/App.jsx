@@ -26,13 +26,13 @@ const App = () => {
               <Link to="/allperiods">All Periods</Link>
             </li>
             <li className="appLi">
-              <Link to="/period">One Period</Link>
+              <Link to="/period/:id">One Period</Link>
             </li>
             <li className="appLi">
               <Link to="/student">One Student</Link>
             </li>
             <li className="appLi">
-              <Link to="/newperiod">New Period</Link>
+              <Link to="/period/new">New Period</Link>
             </li>
             <li className="appLi">
               <Link to="/test">Test Page</Link>
@@ -44,9 +44,9 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={HomePage}></Route>
         <Route exact path="/allperiods" component={AllPeriodsPage}></Route>
-        <Route exact path="/period" component={PeriodPage}></Route>
+        <Route exact path="/period/new" component={NewPeriodPage}></Route>
+        <Route exact path="/period/:id" component={PeriodPage}></Route>
         <Route exact path="/student" component={StudentPage}></Route>
-        <Route exact path="/newperiod" component={NewPeriodPage}></Route>
         <Route exact path="/test" component={TestPage}></Route>
         <Route path="*" component={NotFound}></Route>
       </Switch>
