@@ -3,25 +3,25 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 const AllPeriodsPageComp = () => {
-  const [classrooms, setClassrooms] = useState([])
-  const getClassrooms = async () => {
-    const resp = await axios.get('https://localhost:5001/api/classroom')
-    setClassrooms(resp.data)
+  const [periods, setPeriods] = useState([])
+  const getPeriods = async () => {
+    const resp = await axios.get('https://localhost:5001/api/period')
+    setPeriods(resp.data)
   }
 
   useEffect(() => {
-    getClassrooms()
+    getPeriods()
   }, [])
 
   return (
     <>
       <section>
         <h2>McGonagall's Moola - All Periods</h2>
-        {classrooms.map(classroom => {
+        {periods.map(period => {
           return (
             <button className="teacherPageButton">
-              <Link to={`/classroom/${classroom.id}`}>
-                Period {classroom.periodNumber} - {classroom.subject}
+              <Link to={`/period/${period.id}`}>
+                Period {period.periodNumber} - {period.subject}
               </Link>
             </button>
           )
