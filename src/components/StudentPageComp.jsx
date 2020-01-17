@@ -1,12 +1,12 @@
 import React from 'react'
 
-const StudentPageComp = () => {
+const StudentPageComp = props => {
   return (
     <>
       <div class="wrap-collabsible">
         <input id="collapsible" className="toggle" type="checkbox" />
         <label for="collapsible" className="lbl-toggle">
-          Harry Potter
+          {props.name}
         </label>
         <div class="collapsible-content">
           <div class="content-inner">

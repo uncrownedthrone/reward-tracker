@@ -2,7 +2,9 @@ import React from 'react'
 import StudentPageComp from '../components/OneStudentComp'
 
 const HomePage = () => {
-  return <StudentPageComp />
+  return <div></div>
+
+  // return <StudentPageComp />
 }
 
 export default HomePage
