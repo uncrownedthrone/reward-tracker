@@ -1,12 +1,12 @@
 # Capstone - Reward Tracker
 
-I have created a reward tracking system that is currently geared towards distributing and tracking student rewards for a high school.
+I have created a reward tracking system that is geared towards distributing and tracking student rewards for a school. Both teachers and students would have access to this system. The teacher will be able to create periods, add/remove students, and add/redeem rewards. The student will be able to check their balances and see their redemption history.
 
-My wife is a high school English teacher whose school has a reward system where any teacher can give “bucks” to students as a reward for good behavior. Then, the student can redeem the bucks from any teacher for a special privilege, such as five minutes of listening to music on their phone at the end of a class.
+My wife is a high school English teacher whose school has a reward system where any teacher can give “points” to students as a reward for good behavior. The student can then redeem the points from any teacher for a special privilege, such as five minutes of using their phone at the end of a class or add points to overall grade.
 
-The current tracking system is clunky, unintuitive and generally, not user friendly, so I set out to make a responsive reward system tracker. In addition, it’s responsive so it scales for use on either a desktop, tablet, or phone. This enables teachers and students to pull up real-time data about their rewards and do so wherever they may be on campus.
+The current tracking system used at her school is clunky, unintuitive and is only available on the teacher's desktop computer. I created a responsive reward system tracker that can be used on a mobile device or a desktop. This enables teachers and students to pull up real-time data about their rewards and do so wherever they may be on campus.
 
-This project will use the following technologies:
+Written using:
 
 - React.js
 - React Router
