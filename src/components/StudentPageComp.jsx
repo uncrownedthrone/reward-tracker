@@ -13,10 +13,10 @@ const StudentPageComp = () => {
     getStudents()
   }, [])
 
-  return students.map((student, i) => {
+  return students.map((st, i) => {
     return (
       <p key={i}>
-        {student.name} - {student.house}
+        {st.name} is in {st.house}
       </p>
     )
   })
