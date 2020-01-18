@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import PeriodPageComp from '../components/PeriodPageComp'
 
 const PeriodPage = props => {
   const [period, setPeriod] = useState({})

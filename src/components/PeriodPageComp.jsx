@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import StudentPageComp from './StudentPageComp'
 
 const PeriodPageComp = props => {
   const [student, setStudent] = useState([])

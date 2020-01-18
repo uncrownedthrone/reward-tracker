@@ -1,10 +1,8 @@
 import React from 'react'
-import StudentPageComp from '../components/OneStudentComp'
+import StudentPageComp from '../components/StudentPageComp'
 
-const HomePage = () => {
-  return <div></div>
-
-  // return <StudentPageComp />
+const StudentPage = () => {
+  return <StudentPageComp />
 }
 
-export default HomePage
+export default StudentPage

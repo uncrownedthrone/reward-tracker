@@ -1,37 +1,22 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
-const StudentPageComp = props => {
-  return (
-    <div>TEST</div>
-    // <>
-    //   <div class="wrap-collabsible">
-    //     <input id="collapsible" className="toggle" type="checkbox" />
-    //     <label for="collapsible" className="lbl-toggle">
-    //       {student.name}
-    //     </label>
-    //     <div class="collapsible-content">
-    //       <div class="content-inner">
-    //         <div className="addButtons">
-    //           <button className="addCollapseButton">ADD 1</button>
-    //           <button className="addCollapseButton">ADD 3</button>
-    //           <button className="addCollapseButton">ADD 5</button>
-    //         </div>
-    //         <div className="redeemButtons">
-    //           <button className="redeemCollapseButton">REDEEM 1</button>
-    //           <button className="redeemCollapseButton">REDEEM 3</button>
-    //           <button className="redeemCollapseButton">REDEEM 5</button>
-    //         </div>
-    //         <input
-    //           className="collapseText"
-    //           type="text"
-    //           placeholder="ADD/REDEEM Reason"
-    //         />
-    //         <button className="collapseButton">Submit</button>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </>
-  )
+const StudentPageComp = () => {
+  const [students, setStudent] = useState([])
+
+  const getStudents = async () => {
+    const resp = await axios.get('https://localhost:5001/api/Student')
+    setStudent(resp.data)
+    console.log(resp.data)
+  }
+
+  useEffect(() => {
+    getStudents()
+  }, [])
+
+  return students.map(student => {
+    return <p>{student.name}</p>
+  })
 }
 
 export default StudentPageComp
