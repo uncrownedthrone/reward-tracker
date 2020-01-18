@@ -8,11 +8,11 @@ The current tracking system is clunky, unintuitive and generally, not user frien
 
 This project will use the following technologies:
 
-- HTML5
-- CSS
-- JavaScript
-- React
+- React.js
 - React Router
 - C#
 - PostgreSQL
-- .NET Core
+- ASP.NET Core
+- HTML5
+- CSS
+
