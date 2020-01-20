@@ -12,13 +12,9 @@ const OneStudentComp = props => {
           <div class="content-inner">
             <div className="addButtons">
               <button className="addCollapseButton">ADD 1</button>
-              <button className="addCollapseButton">ADD 3</button>
-              <button className="addCollapseButton">ADD 5</button>
             </div>
             <div className="redeemButtons">
               <button className="redeemCollapseButton">REDEEM 1</button>
-              <button className="redeemCollapseButton">REDEEM 3</button>
-              <button className="redeemCollapseButton">REDEEM 5</button>
             </div>
             <input
               className="collapseText"
