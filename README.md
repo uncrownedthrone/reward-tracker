@@ -17,9 +17,9 @@ Written using:
 - CSS
 
 TODO
-{x} PULL students by periodId (controller or react?)
-// find out why collapsible is only collapsing in one area
-// PULL student one at a time to their own page
-// get add and redeem buttons working
-// link add and redeem buttons to students
-// add ability to view reward record history for adding and redeeming
+
+- find out why collapsible is only collapsing in one area
+- PULL student one at a time to their own page
+- get add and redeem buttons working
+- link add and redeem buttons to students
+- add ability to view reward record history for adding and redeeming
