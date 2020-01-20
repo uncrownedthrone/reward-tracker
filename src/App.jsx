@@ -36,7 +36,7 @@ const App = () => {
         <Route exact path="/allperiods" component={AllPeriodsPage}></Route>
         <Route exact path="/period/new" component={NewPeriodPage}></Route>
         <Route exact path="/period/:id" component={PeriodPage}></Route>
-        <Route exact path="/student" component={StudentPage}></Route>
+        <Route exact path="/student/:id" component={StudentPage}></Route>
         <Route path="*" component={NotFound}></Route>
       </Switch>
       <footer>Made on Platform ❾¾</footer>
