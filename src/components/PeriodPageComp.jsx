@@ -22,7 +22,7 @@ const PeriodPageComp = props => {
         {student.map((student, i) => {
           return (
             <>
-              <div class="wrap-collabsible">
+              <div key={i} class="wrap-collabsible">
                 <input id="collapsible" className="toggle" type="checkbox" />
                 <label for="collapsible" className="lbl-toggle">
                   {student.name}
