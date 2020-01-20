@@ -17,7 +17,7 @@ Written using:
 - CSS
 
 TODO
-// PULL students by periodId (controller or react?)
+{x} PULL students by periodId (controller or react?)
 // find out why collapsible is only collapsing in one area
 // PULL student one at a time to their own page
 // get add and redeem buttons working
