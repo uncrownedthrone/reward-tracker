@@ -8,7 +8,6 @@ const StudentPageComp = () => {
   const getStudent = async () => {
     const resp = await axios.get('https://localhost:5001/api/Student/')
     setStudent(resp.data)
-    console.log(resp.data)
   }
 
   // const getPeriod = async () => {
