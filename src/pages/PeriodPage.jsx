@@ -59,10 +59,13 @@ const PeriodPage = props => {
           house={student.house}
         />
         {/* ) })} */}
+      </section>
+      <section>
+        <h2>Add a Student?</h2>
         <form onSubmit={submitStudent}>
           <input
             type="text"
-            placeholder="Student Name"
+            placeholder="Full Name"
             value={student.name}
             name="name"
             onChange={updateStudentObject}
@@ -76,7 +79,7 @@ const PeriodPage = props => {
           />
           <input
             type="number"
-            placeholder="Period"
+            placeholder="Period #"
             value={student.periodId}
             name="periodId"
             onChange={updateStudentObject}

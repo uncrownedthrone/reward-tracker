@@ -23,7 +23,7 @@ const HomePage = () => {
           <li className="homePageLi">
             <Link to="/period/new">Create a Classroom</Link>
           </li>
-          <li className="homePageLi">Add/Remove Students</li>
+          <li className="homePageLi">Add Students</li>
           <li className="homePageLi">Add/Redeem Points</li>
         </ul>
       </section>

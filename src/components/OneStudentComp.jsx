@@ -10,6 +10,7 @@ const OneStudentComp = props => {
       `https://localhost:5001/api/Student/${props.periodId}`
     )
     setStudent(resp.data)
+    console.log(resp.data)
   }
 
   // const getReward = async () => {
@@ -47,7 +48,7 @@ const OneStudentComp = props => {
               type="text"
               placeholder="ADD/REDEEM Reason"
             />
-            <button className="collapseButton">Submit</button>
+            <button className="collapseButton">Update Record</button>
           </div>
         </div>
       </div>

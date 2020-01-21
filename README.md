@@ -18,7 +18,7 @@ Written using:
 
 TODO
 
-- [ ] add students by period? teacher?
+- [ ] add students by period
 - [ ] find out why collapsible is only collapsing in one area
 - [ ] get add and redeem buttons working
 - [ ] link add and redeem buttons to students
