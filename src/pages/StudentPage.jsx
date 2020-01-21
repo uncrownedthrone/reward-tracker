@@ -22,6 +22,7 @@ const StudentPage = props => {
   useEffect(() => {
     getStudent()
     getReward()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

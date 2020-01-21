@@ -17,9 +17,9 @@ const AllPeriodsPageComp = () => {
     <>
       <section>
         <h2>McGonagall's Moola - All Periods</h2>
-        {periods.map(period => {
+        {periods.map((period, i) => {
           return (
-            <button className="teacherPageButton">
+            <button key={i} className="teacherPageButton">
               <Link to={`/period/${period.id}`}>
                 Period {period.periodNumber} - {period.subject}
               </Link>

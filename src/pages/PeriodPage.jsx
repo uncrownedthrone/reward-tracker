@@ -4,11 +4,7 @@ import OneStudentComp from '../components/OneStudentComp'
 
 const PeriodPage = props => {
   const [period, setPeriod] = useState({})
-  const [student, setStudent] = useState({
-    name: '',
-    house: '',
-    periodId: '',
-  })
+  const [students, setStudents] = useState([])
 
   const getPeriod = async () => {
     const resp = await axios.get(
@@ -21,13 +17,13 @@ const PeriodPage = props => {
     const resp = await axios.get(
       `https://localhost:5001/api/Period/AllStudentsJoin/${props.match.params.id}`
     )
-    setStudent(resp.data)
+    setStudents(resp.data)
     console.log(resp.data)
   }
 
   const updateStudentObject = e => {
     e.persist()
-    setStudent(prevStudent => ({
+    setStudents(prevStudent => ({
       ...prevStudent,
       [e.target.name]: e.target.value,
     }))
@@ -36,15 +32,20 @@ const PeriodPage = props => {
   const submitStudent = async e => {
     e.preventDefault()
     const resp = await axios.post('https://localhost:5001/api/student', {
-      ...student,
-      periodId: parseInt(student.periodId),
+      ...students,
+      periodId: parseInt(students.periodId),
     })
     console.log(resp.data)
+  }
+
+  const reloadPage = () => {
+    window.location.reload()
   }
 
   useEffect(() => {
     getPeriod()
     getStudents()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
@@ -53,11 +54,14 @@ const PeriodPage = props => {
         <h2>
           Period {period.periodNumber} - {period.subject}
         </h2>
-        <OneStudentComp
-          periodId={props.match.params.id}
-          name={student.name}
-          house={student.house}
-        />
+        {students.map(student => {
+          return (
+            <OneStudentComp
+              periodId={props.match.params.id}
+              student={student}
+            />
+          )
+        })}
       </section>
       <section>
         <h2>Add a Student?</h2>
@@ -65,25 +69,25 @@ const PeriodPage = props => {
           <input
             type="text"
             placeholder="Full Name"
-            value={student.name}
+            value={students.name}
             name="name"
             onChange={updateStudentObject}
           />
           <input
             type="text"
             placeholder="House"
-            value={student.house}
+            value={students.house}
             name="house"
             onChange={updateStudentObject}
           />
           <input
             type="number"
             placeholder="Period #"
-            value={student.periodId}
+            value={students.periodId}
             name="periodId"
             onChange={updateStudentObject}
           />
-          <button>Add Student</button>
+          <button onClick={reloadPage}>Add Student</button>
         </form>
       </section>
     </>

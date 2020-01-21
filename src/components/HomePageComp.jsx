@@ -18,14 +18,10 @@ const HomePage = () => {
           Ravenclaw, intelligence and wit; Hufflepuff, loyalty and fair play;
           and Slytherin, the values of being sly and cunning.
         </p>
-        <h2>Choose an Action Below:</h2>
-        <ul className="homePageUl">
-          <li className="homePageLi">
-            <Link to="/period/new">Create a Classroom</Link>
-          </li>
-          <li className="homePageLi">Add Students</li>
-          <li className="homePageLi">Add/Redeem Points</li>
-        </ul>
+        <h2>Let's get started by creating a new period!</h2>
+        <button>
+          <Link to="/period/new">Create a Period</Link>
+        </button>
       </section>
     </>
   )

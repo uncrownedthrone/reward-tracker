@@ -2,56 +2,67 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const OneStudentComp = props => {
-  const [student, setStudent] = useState({})
-  // const [reward, setReward] = useState(0)
-  // const [isExpanded, setIsExpanded] = useState(false)
+  const [student, setStudent] = useState(props.student)
+  const [reason, setReason] = useState('')
+  const [isExpanded, setIsExpanded] = useState(false)
 
-  const getStudent = async () => {
-    const resp = await axios.get(
-      `https://localhost:5001/api/Period/AllStudentsJoin/${props.periodId}`
-    )
-    setStudent(resp.data)
+  const sendRewardToApi = async () => {
+    const resp = await axios.post('https://localhost:5001/api/reward', {
+      reason: reason,
+      studentId: parseInt(props.match.params.id),
+    })
+
     console.log(resp.data)
+    setStudent(prev => {
+      return {
+        ...prev,
+        rewards: [...prev.rewards.concat(resp.data)],
+      }
+    })
   }
-
-  // const getReward = async () => {
-  //   const resp = await axios.get(
-  //     `https://localhost:5001/api/Student/AllRewards/${props.periodId}`
-  //   )
-  //   setReward(resp.data)
-  // }
 
   // post to value
   // add a row and sum up
 
   useEffect(() => {
-    getStudent()
-    // getReward()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
     <>
-      <div class="wrap-collabsible">
-        <input id="collapsible" className="toggle" type="checkbox" />
-        <label for="collapsible" className="lbl-toggle">
-          {student.name} - {student.house}
+      <div className="wrap-collabsible">
+        {/* <input id="collapsible" className="toggle" type="checkbox" /> */}
+        <label
+          for="collapsible"
+          className="lbl-toggle"
+          onClick={() => {
+            setIsExpanded(!isExpanded)
+          }}
+        >
+          {student.name}
         </label>
-        <div class="collapsible-content">
-          <div class="content-inner">
-            <div className="addButtons">
-              <button className="addCollapseButton">ADD 1</button>
+        {isExpanded && (
+          <div className="collapsible-content">
+            <div className="content-inner">
+              <div className="addButtons">
+                <button className="addCollapseButton">ADD 1</button>
+              </div>
+              <div className="redeemButtons">
+                <button className="redeemCollapseButton">REDEEM 1</button>
+              </div>
+              <input
+                className="collapseText"
+                type="text"
+                value={reason}
+                onChange={e => setReason(e.target.value)}
+                placeholder="ADD/REDEEM Reason"
+              />
+              <button onClick={sendRewardToApi} className="collapseButton">
+                Update Record
+              </button>
             </div>
-            <div className="redeemButtons">
-              <button className="redeemCollapseButton">REDEEM 1</button>
-            </div>
-            <input
-              className="collapseText"
-              type="text"
-              placeholder="ADD/REDEEM Reason"
-            />
-            <button className="collapseButton">Update Record</button>
           </div>
-        </div>
+        )}
       </div>
     </>
   )
