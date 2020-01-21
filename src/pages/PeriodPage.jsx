@@ -9,6 +9,7 @@ const PeriodPage = props => {
     house: '',
     periodId: '',
   })
+
   const getPeriod = async () => {
     const resp = await axios.get(
       `https://localhost:5001/api/Period/${props.match.params.id}`
@@ -34,8 +35,9 @@ const PeriodPage = props => {
 
   const submitStudent = async e => {
     e.preventDefault()
-    const resp = await axios.post('https://localhost:5001/api/student/', {
+    const resp = await axios.post('https://localhost:5001/api/student', {
       ...student,
+      periodId: parseInt(student.periodId),
     })
     console.log(resp.data)
   }
@@ -51,14 +53,11 @@ const PeriodPage = props => {
         <h2>
           Period {period.periodNumber} - {period.subject}
         </h2>
-        {/* {student.map(student => {
-          return ( */}
         <OneStudentComp
           periodId={props.match.params.id}
           name={student.name}
           house={student.house}
         />
-        {/* ) })} */}
       </section>
       <section>
         <h2>Add a Student?</h2>

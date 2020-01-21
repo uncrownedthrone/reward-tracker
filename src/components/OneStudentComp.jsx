@@ -3,11 +3,12 @@ import axios from 'axios'
 
 const OneStudentComp = props => {
   const [student, setStudent] = useState({})
-  const [isExpanded, setIsExpanded] = useState(false)
+  // const [reward, setReward] = useState(0)
+  // const [isExpanded, setIsExpanded] = useState(false)
 
   const getStudent = async () => {
     const resp = await axios.get(
-      `https://localhost:5001/api/Student/${props.periodId}`
+      `https://localhost:5001/api/Period/AllStudentsJoin/${props.periodId}`
     )
     setStudent(resp.data)
     console.log(resp.data)
