@@ -19,8 +19,6 @@ Written using:
 TODO
 
 - [ ] add students by period? teacher?
-- [ ] connect student page to link somewhere?
-- [ ] find out why teacher is being duplicated
 - [ ] find out why collapsible is only collapsing in one area
 - [ ] get add and redeem buttons working
 - [ ] link add and redeem buttons to students

@@ -3,53 +3,28 @@ import axios from 'axios'
 
 const OneStudentComp = props => {
   const [student, setStudent] = useState({})
-  const [reward, setReward] = useState([])
+  const [isExpanded, setIsExpanded] = useState(false)
 
   const getStudent = async () => {
     const resp = await axios.get(
-      `https://localhost:5001/api/Student/${props.match.params.id}`
+      `https://localhost:5001/api/Student/${props.periodId}`
     )
     setStudent(resp.data)
   }
 
-  const getReward = async () => {
-    const resp = await axios.get(
-      `https://localhost:5001/api/Student/AllRewards/${props.match.params.id}`
-    )
-    setReward(resp.data)
-  }
+  // const getReward = async () => {
+  //   const resp = await axios.get(
+  //     `https://localhost:5001/api/Student/AllRewards/${props.periodId}`
+  //   )
+  //   setReward(resp.data)
+  // }
 
-  const AddReward = async () => {
-    const resp = await axios.put(
-      `https://localhost:5001/api/Student/Add/${props.match.params.id}`
-    )
-    if (resp.status === 200) {
-      setStudent(student => {
-        student.AddReward += 1
-        return {
-          ...student,
-        }
-      })
-    }
-  }
-
-  const RedeemReward = async () => {
-    const resp = await axios.put(
-      `https://localhost:5001/api/Student/Redeem/${props.match.params.id}`
-    )
-    if (resp.status === 200) {
-      setStudent(student => {
-        student.RedeemReward -= 1
-        return {
-          ...student,
-        }
-      })
-    }
-  }
+  // post to value
+  // add a row and sum up
 
   useEffect(() => {
     getStudent()
-    getReward()
+    // getReward()
   }, [])
 
   return (
@@ -57,20 +32,15 @@ const OneStudentComp = props => {
       <div class="wrap-collabsible">
         <input id="collapsible" className="toggle" type="checkbox" />
         <label for="collapsible" className="lbl-toggle">
-          {props.name}
-          {student.name}
+          {student.name} - {student.house}
         </label>
         <div class="collapsible-content">
           <div class="content-inner">
             <div className="addButtons">
-              <button className="addCollapseButton" onClick={AddReward}>
-                ADD 1
-              </button>
+              <button className="addCollapseButton">ADD 1</button>
             </div>
             <div className="redeemButtons">
-              <button className="redeemCollapseButton" onClick={RedeemReward}>
-                REDEEM 1
-              </button>
+              <button className="redeemCollapseButton">REDEEM 1</button>
             </div>
             <input
               className="collapseText"
