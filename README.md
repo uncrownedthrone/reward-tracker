@@ -1,7 +1,6 @@
 TODO
 
 - get add and redeem buttons working
-- link add and redeem buttons to students
 - add ability to view reward record history for adding/redeeming
 
 # Capstone - Reward Tracker
