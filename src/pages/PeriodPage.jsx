@@ -40,9 +40,9 @@ const PeriodPage = props => {
     console.log(resp.data)
   }
 
-  // const reloadPage = () => {
-  //   window.location.reload()
-  // }
+  const reloadPage = () => {
+    window.location.reload()
+  }
 
   useEffect(() => {
     getPeriod()
@@ -68,24 +68,24 @@ const PeriodPage = props => {
       <section>
         <>
           <h2>Add a Student?</h2>
-          {/* <form onSubmit={submitNewStudent}> */}
-          <input
-            type="text"
-            placeholder="Full Name"
-            value={newStudent.name}
-            name="name"
-            onChange={updateStudentObject}
-          />
-          <input
-            type="text"
-            placeholder="House"
-            value={newStudent.house}
-            name="house"
-            onChange={updateStudentObject}
-          />
+          <form onSubmit={submitNewStudent}>
+            <input
+              type="text"
+              placeholder="Full Name"
+              value={newStudent.name}
+              name="name"
+              onChange={updateStudentObject}
+            />
+            <input
+              type="text"
+              placeholder="House"
+              value={newStudent.house}
+              name="house"
+              onChange={updateStudentObject}
+            />
 
-          <button onClick={submitNewStudent}>Add Student</button>
-          {/* </form> */}
+            <button onClick={reloadPage}>Add Student</button>
+          </form>
         </>
       </section>
     </>

@@ -31,12 +31,18 @@ const StudentPage = props => {
         <h2>
           {student.name} - {student.house}
         </h2>
+        <p>Add/Redeem History</p>
         {reward.map(reward => {
-          return <p>McGonagall's Moola - {reward.id}</p>
+          return (
+            <>
+              <ul>
+                <li>
+                  Reason: {reward.reason} | Moola: {reward.rewardAmount}
+                </li>
+              </ul>
+            </>
+          )
         })}
-        <ul>Add/Redeem History</ul>
-        <li>Added 1</li>
-        <li>Redeemed 1</li>
       </section>
     </>
   )

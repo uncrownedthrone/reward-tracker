@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 
 const OneStudentComp = props => {
@@ -13,13 +13,8 @@ const OneStudentComp = props => {
       rewardAmount: parseInt(rewardAmount),
       studentId: parseInt(props.student.id),
     })
-    setStudent(resp.data)
     console.log(resp.data)
   }
-
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
 
   return (
     <>
@@ -44,6 +39,20 @@ const OneStudentComp = props => {
                 >
                   ADD 1
                 </button>
+                <button
+                  className="addCollapseButton"
+                  value={3}
+                  onClick={e => setRewardAmount(e.target.value)}
+                >
+                  ADD 3
+                </button>
+                <button
+                  className="addCollapseButton"
+                  value={5}
+                  onClick={e => setRewardAmount(e.target.value)}
+                >
+                  ADD 5
+                </button>
               </div>
               <div className="redeemButtons">
                 <button
@@ -52,6 +61,20 @@ const OneStudentComp = props => {
                   onClick={e => setRewardAmount(e.target.value)}
                 >
                   REDEEM 1
+                </button>
+                <button
+                  className="redeemCollapseButton"
+                  value={-3}
+                  onClick={e => setRewardAmount(e.target.value)}
+                >
+                  REDEEM 3
+                </button>
+                <button
+                  className="redeemCollapseButton"
+                  value={-5}
+                  onClick={e => setRewardAmount(e.target.value)}
+                >
+                  REDEEM 5
                 </button>
               </div>
               <input

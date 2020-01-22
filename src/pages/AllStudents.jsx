@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 const AllStudents = () => {
@@ -18,11 +19,13 @@ const AllStudents = () => {
       <section>
         {student.map(student => {
           return (
-            <ul>
-              <li>
-                {student.name} - {student.house} - {student.id}
-              </li>
-            </ul>
+            <>
+              <button>
+                <Link to={`/student/${student.id}`}>
+                  {student.name} - {student.house}
+                </Link>
+              </button>
+            </>
           )
         })}
       </section>

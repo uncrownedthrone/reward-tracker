@@ -27,7 +27,7 @@ input {
 }
 
 header {
-  color: white;
+  color: #fff8f0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -81,7 +81,7 @@ h1 {
   font-size: 1rem;
   justify-content: center;
   cursor: pointer;
-  border: 2px solid white;
+  border: 2px solid #fff8f0;
 }
 
 hr {
@@ -127,7 +127,7 @@ input[type='checkbox'] {
 
 .lbl-toggle {
   display: block;
-  width: 250px;
+  width: 400px;
 
   font-family: 'Source Sans Pro', sans-serif;
 
@@ -137,9 +137,9 @@ input[type='checkbox'] {
   padding: 1rem;
   margin: 0.5rem;
 
-  color: white;
+  color: #fff8f0;
   background: #111d4a;
-  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2), 0px 0px 10px 0px white;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2), 0px 0px 10px 0px #fff8f0;
 
   cursor: pointer;
 
@@ -186,7 +186,7 @@ input[type='checkbox'] {
 }
 
 .toggle {
-  color: white;
+  color: #fff8f0;
   padding: 1rem;
   margin: 1rem;
   font-family: 'Source Sans Pro', sans-serif;
@@ -202,28 +202,33 @@ input[type='checkbox'] {
 .addCollapseButton {
   box-shadow: none;
   margin: 0.5rem;
-  width: 100px;
+  width: 79.03px;
   padding: 0.25rem;
   border-radius: 20px;
-  color: greenyellow;
-  border: 2px solid white;
+  color: green;
+  border: 2px solid #fff8f0;
+}
+
+.addCollapseButton::after {
+  color: gray;
 }
 
 .redeemCollapseButton {
   box-shadow: none;
   margin: 0.5rem;
-  width: 100px;
+  width: auto;
   padding: 0.25rem;
   border-radius: 5px;
   color: red;
-  border: 2px solid white;
+  border: 2px solid #fff8f0;
 }
 
 .collapseButton {
   box-shadow: none;
   margin: 0.25rem;
-  width: 200px;
-  border: 2px solid white;
+  padding: 0.5rem;
+  width: auto;
+  border: 2px solid #fff8f0;
 }
 
 .collapseText {
@@ -240,12 +245,12 @@ button {
   font-family: 'Source Sans Pro', sans-serif;
   border-radius: 5px;
   background-color: #111d4a;
-  color: white;
+  color: #fff8f0;
   outline: none;
   width: 250px;
   justify-content: center;
   cursor: pointer;
-  border: 2px solid white;
+  border: 2px solid #fff8f0;
   margin: 0.5rem;
 }
 
@@ -278,7 +283,7 @@ input {
     align-items: center;
   }
   section {
-    color: white;
+    color: #fff8f0;
     padding: 1rem;
     margin: 1rem;
     background-color: #111d4a;

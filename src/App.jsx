@@ -26,9 +26,6 @@ const App = () => {
               <Link to="/allperiods">All Periods</Link>
             </li>
             <li className="appLi">
-              <Link to="/student">One Student</Link>
-            </li>
-            <li className="appLi">
               <Link to="/allstudents">All Students</Link>
             </li>
           </ul>
