@@ -5,6 +5,7 @@ import OneStudentComp from '../components/OneStudentComp'
 const PeriodPage = props => {
   const [period, setPeriod] = useState({})
   const [students, setStudents] = useState([])
+  const [newStudent, setNewStudent] = useState({})
 
   const getPeriod = async () => {
     const resp = await axios.get(

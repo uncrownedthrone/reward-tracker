@@ -1,5 +1,6 @@
 TODO
 
+- build error on add student (students.map not a function again)
 - get add and redeem buttons working
 - add ability to view reward record history for adding/redeeming
 

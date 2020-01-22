@@ -4,14 +4,15 @@ import axios from 'axios'
 const OneStudentComp = props => {
   const [student, setStudent] = useState(props.student)
   const [reason, setReason] = useState('')
+  const [rewardAmount, setRewardAmount] = useState('')
   const [isExpanded, setIsExpanded] = useState(false)
 
   const sendRewardToApi = async () => {
     const resp = await axios.post('https://localhost:5001/api/reward', {
       reason: reason,
-      studentId: parseInt(props.match.params.id),
+      rewardAmount: parseInt(rewardAmount),
+      studentId: parseInt(props.student.id),
     })
-
     console.log(resp.data)
     setStudent(prev => {
       return {
@@ -31,7 +32,6 @@ const OneStudentComp = props => {
   return (
     <>
       <div className="wrap-collabsible">
-        {/* <input id="collapsible" className="toggle" type="checkbox" /> */}
         <label
           for="collapsible"
           className="lbl-toggle"
@@ -45,10 +45,22 @@ const OneStudentComp = props => {
           <div className="collapsible-content">
             <div className="content-inner">
               <div className="addButtons">
-                <button className="addCollapseButton">ADD 1</button>
+                <button
+                  className="addCollapseButton"
+                  value={1}
+                  onClick={e => setRewardAmount(e.target.value)}
+                >
+                  ADD 1
+                </button>
               </div>
               <div className="redeemButtons">
-                <button className="redeemCollapseButton">REDEEM 1</button>
+                <button
+                  className="redeemCollapseButton"
+                  value={-1}
+                  onClick={e => setRewardAmount(e.target.value)}
+                >
+                  REDEEM 1
+                </button>
               </div>
               <input
                 className="collapseText"
