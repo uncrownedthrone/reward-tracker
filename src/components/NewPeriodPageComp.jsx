@@ -32,11 +32,14 @@ const NewPeriodPageComp = () => {
     }, true)
 
     if (isValid) {
-      const resp = await axios.post('https://localhost:5001/api/period', {
-        ...period,
-        periodNumber: parseInt(period.periodNumber),
-        teacherId: parseInt(teacherId),
-      })
+      const resp = await axios.post(
+        'https://reward-tracker-api.herokuapp.com/api/period',
+        {
+          ...period,
+          periodNumber: parseInt(period.periodNumber),
+          teacherId: parseInt(teacherId),
+        }
+      )
       if (resp.status === 201) {
         setPeriodId(resp.data.id)
       }
@@ -44,7 +47,9 @@ const NewPeriodPageComp = () => {
   }
 
   const getTeachers = async () => {
-    const resp = await axios.get(`https://localhost:5001/api/teacher`)
+    const resp = await axios.get(
+      `https://reward-tracker-api.herokuapp.com/api/teacher`
+    )
     setTeachers(resp.data)
   }
 

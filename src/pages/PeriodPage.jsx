@@ -9,17 +9,16 @@ const PeriodPage = props => {
 
   const getPeriod = async () => {
     const resp = await axios.get(
-      `https://localhost:5001/api/Period/${props.match.params.id}`
+      `https://reward-tracker-api.herokuapp.com/api/Period/${props.match.params.id}`
     )
     setPeriod(resp.data)
   }
 
   const getStudents = async () => {
     const resp = await axios.get(
-      `https://localhost:5001/api/Period/AllStudentsJoin/${props.match.params.id}`
+      `https://reward-tracker-api.herokuapp.com/api/Period/AllStudentsJoin/${props.match.params.id}`
     )
     setStudents(resp.data)
-    console.log(resp.data)
   }
 
   const updateStudentObject = e => {
@@ -32,11 +31,13 @@ const PeriodPage = props => {
 
   const submitNewStudent = async e => {
     e.preventDefault()
-    const resp = await axios.post('https://localhost:5001/api/student', {
-      ...newStudent,
-      // periodId: parseInt(students.periodId),
-      periodId: parseInt(props.match.params.id),
-    })
+    const resp = await axios.post(
+      'https://reward-tracker-api.herokuapp.com/api/student',
+      {
+        ...newStudent,
+        periodId: parseInt(props.match.params.id),
+      }
+    )
     console.log(resp.data)
   }
 
@@ -68,23 +69,23 @@ const PeriodPage = props => {
       <section>
         <>
           <h2>Add a Student?</h2>
-          <form onSubmit={submitNewStudent}>
-            <input
-              type="text"
-              placeholder="Full Name"
-              value={newStudent.name}
-              name="name"
-              onChange={updateStudentObject}
-            />
-            <input
-              type="text"
-              placeholder="House"
-              value={newStudent.house}
-              name="house"
-              onChange={updateStudentObject}
-            />
-            <button onClick={reloadPage}>Add Student</button>
-          </form>
+          {/* <form onSubmit={submitNewStudent}> */}
+          <input
+            type="text"
+            placeholder="Full Name"
+            value={newStudent.name}
+            name="name"
+            onChange={updateStudentObject}
+          />
+          <input
+            type="text"
+            placeholder="House"
+            value={newStudent.house}
+            name="house"
+            onChange={updateStudentObject}
+          />
+          <button onClick={submitNewStudent}>Add Student</button>
+          {/* </form> */}
         </>
       </section>
     </>

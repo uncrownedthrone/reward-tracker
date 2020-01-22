@@ -5,7 +5,9 @@ import axios from 'axios'
 const AllPeriodsPageComp = () => {
   const [periods, setPeriods] = useState([])
   const getPeriods = async () => {
-    const resp = await axios.get('https://localhost:5001/api/period')
+    const resp = await axios.get(
+      'https://reward-tracker-api.herokuapp.com/api/period'
+    )
     setPeriods(resp.data)
   }
 

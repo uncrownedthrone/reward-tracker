@@ -9,11 +9,14 @@ const OneStudentComp = props => {
   const [isExpanded, setIsExpanded] = useState(false)
 
   const sendRewardToApi = async () => {
-    const resp = await axios.post('https://localhost:5001/api/reward', {
-      reason: reason,
-      rewardAmount: parseInt(rewardAmount),
-      studentId: parseInt(props.student.id),
-    })
+    const resp = await axios.post(
+      'https://reward-tracker-api.herokuapp.com/api/reward',
+      {
+        reason: reason,
+        rewardAmount: parseInt(rewardAmount),
+        studentId: parseInt(props.student.id),
+      }
+    )
     console.log(resp.data)
   }
 

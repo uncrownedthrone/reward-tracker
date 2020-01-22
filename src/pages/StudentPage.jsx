@@ -8,14 +8,14 @@ const StudentPage = props => {
 
   const getStudent = async () => {
     const resp = await axios.get(
-      `https://localhost:5001/api/Student/${props.match.params.id}`
+      `https://reward-tracker-api.herokuapp.com/api/Student/${props.match.params.id}`
     )
     setStudent(resp.data)
   }
 
   const getReward = async () => {
     const resp = await axios.get(
-      `https://localhost:5001/api/Student/AllRewards/${props.match.params.id}`
+      `https://reward-tracker-api.herokuapp.com/api/Student/AllRewards/${props.match.params.id}`
     )
     setReward(resp.data)
     const total = resp.data.reduce((acc, reward) => {
