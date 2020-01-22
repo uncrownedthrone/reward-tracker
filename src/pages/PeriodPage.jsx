@@ -83,7 +83,6 @@ const PeriodPage = props => {
               name="house"
               onChange={updateStudentObject}
             />
-
             <button onClick={reloadPage}>Add Student</button>
           </form>
         </>

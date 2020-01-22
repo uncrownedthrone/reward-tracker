@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 const OneStudentComp = props => {
@@ -86,6 +87,11 @@ const OneStudentComp = props => {
               />
               <button onClick={sendRewardToApi} className="collapseButton">
                 Update {student.name}'s Moola
+              </button>
+              <button className="collapseButton">
+                <Link to={`/student/${student.id}`}>
+                  View {student.name}'s Moola
+                </Link>
               </button>
             </div>
           </div>

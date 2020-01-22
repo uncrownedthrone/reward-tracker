@@ -275,6 +275,13 @@ input {
   font-size: 1rem;
 }
 
+table,
+tr,
+th,
+td {
+  border: 1px solid white;
+}
+
 @media (max-width: 768px) {
   .appNav {
     display: flex;

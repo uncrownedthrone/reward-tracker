@@ -4,6 +4,7 @@ import axios from 'axios'
 const StudentPage = props => {
   const [student, setStudent] = useState({})
   const [reward, setReward] = useState([])
+  const [totalRewards, setTotalRewards] = useState()
 
   const getStudent = async () => {
     const resp = await axios.get(
@@ -17,6 +18,10 @@ const StudentPage = props => {
       `https://localhost:5001/api/Student/AllRewards/${props.match.params.id}`
     )
     setReward(resp.data)
+    const total = resp.data.reduce((acc, reward) => {
+      return acc + reward.rewardAmount
+    }, 0)
+    setTotalRewards(total)
   }
 
   useEffect(() => {
@@ -31,18 +36,17 @@ const StudentPage = props => {
         <h2>
           {student.name} - {student.house}
         </h2>
-        <p>Add/Redeem History</p>
+        <h3>Add/Redeem History</h3>
         {reward.map(reward => {
           return (
             <>
-              <ul>
-                <li>
-                  Reason: {reward.reason} | Moola: {reward.rewardAmount}
-                </li>
-              </ul>
+              <p>
+                Reason: {reward.reason} | Moola: {reward.rewardAmount}
+              </p>
             </>
           )
         })}
+        <p>Total Moola: {totalRewards}</p>
       </section>
     </>
   )
