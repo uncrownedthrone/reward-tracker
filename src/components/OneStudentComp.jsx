@@ -13,17 +13,9 @@ const OneStudentComp = props => {
       rewardAmount: parseInt(rewardAmount),
       studentId: parseInt(props.student.id),
     })
+    setStudent(resp.data)
     console.log(resp.data)
-    setStudent(prev => {
-      return {
-        ...prev,
-        rewards: [...prev.rewards.concat(resp.data)],
-      }
-    })
   }
-
-  // post to value
-  // add a row and sum up
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -70,7 +62,7 @@ const OneStudentComp = props => {
                 placeholder="ADD/REDEEM Reason"
               />
               <button onClick={sendRewardToApi} className="collapseButton">
-                Update Record
+                Update {student.name}'s Moola
               </button>
             </div>
           </div>

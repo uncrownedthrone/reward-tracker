@@ -5,7 +5,7 @@ import OneStudentComp from '../components/OneStudentComp'
 const PeriodPage = props => {
   const [period, setPeriod] = useState({})
   const [students, setStudents] = useState([])
-  const [newStudent, setNewStudent] = useState([])
+  const [newStudent, setNewStudent] = useState({})
 
   const getPeriod = async () => {
     const resp = await axios.get(
@@ -33,9 +33,9 @@ const PeriodPage = props => {
   const submitNewStudent = async e => {
     e.preventDefault()
     const resp = await axios.post('https://localhost:5001/api/student', {
-      ...students,
+      ...newStudent,
       // periodId: parseInt(students.periodId),
-      periodId: parseInt(newStudent.periodId),
+      periodId: parseInt(props.match.params.id),
     })
     console.log(resp.data)
   }
@@ -83,13 +83,7 @@ const PeriodPage = props => {
             name="house"
             onChange={updateStudentObject}
           />
-          <input
-            type="number"
-            placeholder="Period #"
-            value={newStudent.periodId}
-            name="periodId"
-            onChange={updateStudentObject}
-          />
+
           <button onClick={submitNewStudent}>Add Student</button>
           {/* </form> */}
         </>
