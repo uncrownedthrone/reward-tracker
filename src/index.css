@@ -163,7 +163,9 @@ input[type='checkbox'] {
 
 .collapsible-content .content-inner {
   background: #92140c;
-
+  margin-top: -0.25rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   padding: 0.5rem 1rem;

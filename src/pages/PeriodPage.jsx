@@ -5,7 +5,7 @@ import OneStudentComp from '../components/OneStudentComp'
 const PeriodPage = props => {
   const [period, setPeriod] = useState({})
   const [students, setStudents] = useState([])
-  const [newStudent, setNewStudent] = useState({})
+  const [newStudent, setNewStudent] = useState([])
 
   const getPeriod = async () => {
     const resp = await axios.get(
@@ -24,24 +24,25 @@ const PeriodPage = props => {
 
   const updateStudentObject = e => {
     e.persist()
-    setStudents(prevStudent => ({
+    setNewStudent(prevStudent => ({
       ...prevStudent,
       [e.target.name]: e.target.value,
     }))
   }
 
-  const submitStudent = async e => {
+  const submitNewStudent = async e => {
     e.preventDefault()
     const resp = await axios.post('https://localhost:5001/api/student', {
       ...students,
-      periodId: parseInt(students.periodId),
+      // periodId: parseInt(students.periodId),
+      periodId: parseInt(newStudent.periodId),
     })
     console.log(resp.data)
   }
 
-  const reloadPage = () => {
-    window.location.reload()
-  }
+  // const reloadPage = () => {
+  //   window.location.reload()
+  // }
 
   useEffect(() => {
     getPeriod()
@@ -65,31 +66,33 @@ const PeriodPage = props => {
         })}
       </section>
       <section>
-        <h2>Add a Student?</h2>
-        <form onSubmit={submitStudent}>
+        <>
+          <h2>Add a Student?</h2>
+          {/* <form onSubmit={submitNewStudent}> */}
           <input
             type="text"
             placeholder="Full Name"
-            value={students.name}
+            value={newStudent.name}
             name="name"
             onChange={updateStudentObject}
           />
           <input
             type="text"
             placeholder="House"
-            value={students.house}
+            value={newStudent.house}
             name="house"
             onChange={updateStudentObject}
           />
           <input
             type="number"
             placeholder="Period #"
-            value={students.periodId}
+            value={newStudent.periodId}
             name="periodId"
             onChange={updateStudentObject}
           />
-          <button onClick={reloadPage}>Add Student</button>
-        </form>
+          <button onClick={submitNewStudent}>Add Student</button>
+          {/* </form> */}
+        </>
       </section>
     </>
   )
