@@ -179,9 +179,6 @@ input[type='checkbox'] {
 }
 
 .collapsible-content {
-  /* max-height: 0px; */
-  /* overflow: hidden; */
-
   transition: max-height 0.25s ease-in;
 }
 
@@ -275,11 +272,44 @@ input {
   font-size: 1rem;
 }
 
-table,
-tr,
-th,
-td {
-  border: 1px solid white;
+.moolaListUl {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.moolaListLi {
+  background: #fff8f0;
+  color: black;
+  counter-increment: myCounter;
+  margin: 0 0 35px 0;
+  padding: 13px;
+  position: relative;
+  top: 1em;
+  border-radius: 0em 2px 1em 1em;
+  padding-left: 2em;
+  font-size: 1.2em;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.moolaListLi:before {
+  content: counter(myCounter, decimal-leading-zero);
+  display: inline-block;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 1.3em;
+  background-color: #92140c;
+  padding: 10px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: -40px;
+  border-radius: 50%;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.moolaListLi:nth-child(even) {
+  background-color: #fff8f0;
 }
 
 @media (max-width: 768px) {
