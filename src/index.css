@@ -206,6 +206,15 @@ input[type='checkbox'] {
   border: 2px solid #fff8f0;
 }
 
+.addCollapseButton:active {
+  background: #fff8f0;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+  -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+  box-shadow: inset 0px 0px 5px #c1c1c1;
+  outline: none;
+  color: green;
+}
+
 .addCollapseButton::after {
   color: gray;
 }
@@ -218,6 +227,15 @@ input[type='checkbox'] {
   border-radius: 5px;
   color: red;
   border: 2px solid #fff8f0;
+}
+
+.redeemCollapseButton:active {
+  background: #fff8f0;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+  -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+  box-shadow: inset 0px 0px 5px #c1c1c1;
+  outline: none;
+  color: red;
 }
 
 .collapseButton {
@@ -252,11 +270,12 @@ button {
 }
 
 button:active {
-  background: #e5e5e5;
+  background: #fff8f0;
   -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
   -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
   box-shadow: inset 0px 0px 5px #c1c1c1;
   outline: none;
+  color: black;
 }
 
 .addButtons {
