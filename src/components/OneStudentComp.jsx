@@ -18,6 +18,7 @@ const OneStudentComp = props => {
       }
     )
     console.log(resp.data)
+    window.location.reload()
   }
 
   return (
