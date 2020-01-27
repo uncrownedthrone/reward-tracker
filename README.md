@@ -1,11 +1,6 @@
-TODO
-
-- [ ] Student name and house not adding to DB on create student
-- [ ] Reward not posting to student
-
 # Capstone - Reward Tracker
 
-I have created a reward tracking system that is geared towards distributing and tracking student rewards for a school. Both teachers and students will have access to this system. The teacher will be able to create periods, add/remove students, and add/redeem rewards. The student will be able to check their points balances and see the history of when they received and redeemed rewards.
+I have created a reward tracking system for use in distributing and tracking student rewards for schools. Both teachers and students will have access to this system. The teacher will be able to create periods, add/remove students, and add/redeem points. The student will be able to check their points balances and see the history of when they received and redeemed their points.
 
 My wife is a high school English teacher whose school has a reward system where any teacher can give “points” to students as a reward for good behavior. The student can then redeem the points from any teacher for a special privilege, such as five minutes of using their phone at the end of a class or adding points to their overall grade.
 
