@@ -85,8 +85,8 @@ const OneStudentComp = props => {
               <div>
                 <input
                   className="collapseText"
-                  type="text"
-                  placeholder="Select Amount"
+                  type="number"
+                  placeholder="Amount"
                   value={rewardAmount}
                 />
                 <input
@@ -94,7 +94,7 @@ const OneStudentComp = props => {
                   type="text"
                   value={reason}
                   onChange={e => setReason(e.target.value)}
-                  placeholder="Add A Reason"
+                  placeholder="Note"
                 />
               </div>
               <button onClick={sendRewardToApi} className="collapseButton">
