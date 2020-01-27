@@ -82,13 +82,21 @@ const OneStudentComp = props => {
                   REDEEM 5
                 </button>
               </div>
-              <input
-                className="collapseText"
-                type="text"
-                value={reason}
-                onChange={e => setReason(e.target.value)}
-                placeholder="ADD/REDEEM Reason"
-              />
+              <div>
+                <input
+                  className="collapseText"
+                  type="text"
+                  placeholder="Select Amount"
+                  value={rewardAmount}
+                />
+                <input
+                  className="collapseText"
+                  type="text"
+                  value={reason}
+                  onChange={e => setReason(e.target.value)}
+                  placeholder="Add A Reason"
+                />
+              </div>
               <button onClick={sendRewardToApi} className="collapseButton">
                 Update {student.name}'s Moola
               </button>
