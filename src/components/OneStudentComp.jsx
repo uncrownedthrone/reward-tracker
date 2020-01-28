@@ -31,7 +31,7 @@ const OneStudentComp = props => {
             setIsExpanded(!isExpanded)
           }}
         >
-          {student.name}
+          {student.name} | {student.house}
         </label>
         {isExpanded && (
           <div className="collapsible-content">
