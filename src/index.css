@@ -314,6 +314,8 @@ input {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .moolaListLi {
@@ -331,24 +333,27 @@ input {
 }
 
 .moolaListLi:before {
-  content: counter(myCounter, decimal-leading-zero);
+  content: counter(myCounter);
   display: inline-block;
   text-align: center;
-  font-size: 1.5em;
-  line-height: 1.3em;
+  font-size: 2rem;
+  line-height: 1.3rem;
   background-color: #92140c;
   padding: 10px;
   font-weight: bold;
   position: absolute;
   top: 0;
-  left: -40px;
+  left: -25px;
   border-radius: 50%;
   font-family: 'Source Sans Pro', sans-serif;
+  border: 2px solid gold;
 }
 
 .moolaListLi:nth-child(even) {
   background-color: #fff8f0;
+  display: flex;
 }
+
 .fa-angle-up,
 .fa-angle-down {
   font-size: 1.5rem;
