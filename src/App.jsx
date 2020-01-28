@@ -5,6 +5,7 @@ import PeriodPage from './pages/PeriodPage'
 import StudentPage from './pages/StudentPage'
 import NewPeriodPage from './pages/NewPeriodPage'
 import AllPeriodsPage from './pages/AllPeriodsPage'
+import WireframePage from './pages/WireframePage'
 import NotFound from './pages/NotFound'
 
 const App = () => {
@@ -34,9 +35,13 @@ const App = () => {
         <Route exact path="/period/new" component={NewPeriodPage}></Route>
         <Route exact path="/period/:id" component={PeriodPage}></Route>
         <Route exact path="/student/:id" component={StudentPage}></Route>
+        <Route exact path="/wireframe" component={WireframePage}></Route>
         <Route path="*" component={NotFound}></Route>
       </Switch>
       <footer>Made on Platform ❾¾</footer>
+      <h6>
+        <Link to="/wireframe">V2 Wireframes</Link>
+      </h6>
     </Router>
   )
 }
