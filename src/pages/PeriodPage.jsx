@@ -38,11 +38,8 @@ const PeriodPage = props => {
         periodId: parseInt(props.match.params.id),
       }
     )
-    console.log(resp.data)
-  }
-
-  const reloadPage = () => {
     window.location.reload()
+    console.log(resp.data)
   }
 
   useEffect(() => {
