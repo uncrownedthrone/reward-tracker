@@ -316,6 +316,7 @@ input {
   list-style: none;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .moolaListLi {
@@ -329,7 +330,10 @@ input {
   border-radius: 0em 2px 1em 1em;
   padding-left: 2em;
   font-size: 1.2em;
+  width: 225px;
   font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
 .moolaListLi:before {
@@ -346,12 +350,12 @@ input {
   left: -25px;
   border-radius: 50%;
   font-family: 'Source Sans Pro', sans-serif;
-  border: 2px solid gold;
 }
 
 .moolaListLi:nth-child(even) {
   background-color: #fff8f0;
   display: flex;
+  justify-content: center;
 }
 
 .fa-angle-up,
