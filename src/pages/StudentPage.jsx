@@ -42,7 +42,11 @@ const StudentPage = props => {
             return (
               <>
                 <li className="moolaListLi">
-                  {reward.reason} <i class="fas fa-broom"></i>
+                  {reward.reason}
+                  <span>&nbsp;</span>
+                  <i class="fas fa-broom">
+                    <span>&nbsp;</span>
+                  </i>
                   {reward.rewardAmount}
                 </li>
               </>
