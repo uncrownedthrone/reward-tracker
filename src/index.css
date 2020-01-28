@@ -199,11 +199,13 @@ input[type='checkbox'] {
 .addCollapseButton {
   box-shadow: none;
   margin: 0.5rem;
-  width: 79.03px;
-  padding: 0.25rem;
+  width: auto;
+  padding: 0.5rem;
   border-radius: 20px;
-  color: green;
+  color: #00ff00;
   border: 2px solid #fff8f0;
+  font-weight: bolder;
+  font-size: 1.25rem;
 }
 
 .addCollapseButton:active {
@@ -212,7 +214,9 @@ input[type='checkbox'] {
   -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
   box-shadow: inset 0px 0px 5px #c1c1c1;
   outline: none;
-  color: green;
+  color: #00ff00;
+  font-weight: bolder;
+  font-size: 1.25rem;
 }
 
 .addCollapseButton::after {
@@ -223,10 +227,12 @@ input[type='checkbox'] {
   box-shadow: none;
   margin: 0.5rem;
   width: auto;
-  padding: 0.25rem;
-  border-radius: 5px;
+  padding: 0.5rem;
+  border-radius: 20px;
   color: red;
+  font-weight: bolder;
   border: 2px solid #fff8f0;
+  font-size: 1.25rem;
 }
 
 .redeemCollapseButton:active {
@@ -235,7 +241,9 @@ input[type='checkbox'] {
   -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
   box-shadow: inset 0px 0px 5px #c1c1c1;
   outline: none;
+  font-weight: bolder;
   color: red;
+  font-size: 1.25rem;
 }
 
 .collapseButton {
@@ -243,6 +251,7 @@ input[type='checkbox'] {
   margin: 0.25rem;
   padding: 0.5rem;
   width: auto;
+  font-weight: bolder;
   border: 2px solid #fff8f0;
 }
 
@@ -337,6 +346,10 @@ input {
 
 .moolaListLi:nth-child(even) {
   background-color: #fff8f0;
+}
+.fa-angle-up,
+.fa-angle-down {
+  font-size: 1.5rem;
 }
 
 @media (max-width: 768px) {

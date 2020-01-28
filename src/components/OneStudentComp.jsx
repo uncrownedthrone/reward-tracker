@@ -42,21 +42,21 @@ const OneStudentComp = props => {
                   value={1}
                   onClick={e => setRewardAmount(e.target.value)}
                 >
-                  ADD 1
+                  <i class="fas fa-angle-up"></i> 1
                 </button>
                 <button
                   className="addCollapseButton"
                   value={3}
                   onClick={e => setRewardAmount(e.target.value)}
                 >
-                  ADD 3
+                  <i class="fas fa-angle-up"></i> 3
                 </button>
                 <button
                   className="addCollapseButton"
                   value={5}
                   onClick={e => setRewardAmount(e.target.value)}
                 >
-                  ADD 5
+                  <i class="fas fa-angle-up"></i> 5
                 </button>
               </div>
               <div className="redeemButtons">
@@ -65,21 +65,21 @@ const OneStudentComp = props => {
                   value={-1}
                   onClick={e => setRewardAmount(e.target.value)}
                 >
-                  REDEEM 1
+                  <i class="fas fa-angle-down"></i> 1
                 </button>
                 <button
                   className="redeemCollapseButton"
                   value={-3}
                   onClick={e => setRewardAmount(e.target.value)}
                 >
-                  REDEEM 3
+                  <i class="fas fa-angle-down"></i> 3
                 </button>
                 <button
                   className="redeemCollapseButton"
                   value={-5}
                   onClick={e => setRewardAmount(e.target.value)}
                 >
-                  REDEEM 5
+                  <i class="fas fa-angle-down"></i> 5
                 </button>
               </div>
               <div>
