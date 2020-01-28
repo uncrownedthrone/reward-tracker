@@ -11,6 +11,10 @@ const AllPeriodsPageComp = () => {
     setPeriods(resp.data)
   }
 
+  const addNewPeriod = () => {
+    return <Link to="/period/new">Add New Period +</Link>
+  }
+
   useEffect(() => {
     getPeriods()
   }, [])
@@ -30,8 +34,8 @@ const AllPeriodsPageComp = () => {
         })}
       </section>
       <section>
-        <button className="teacherPageButton">
-          <Link to="/period/new">Add New Period +</Link>
+        <button className="teacherPageButton" onClick={addNewPeriod}>
+          Add New Period +
         </button>
       </section>
     </>
