@@ -20,7 +20,7 @@ const HomePage = () => {
         </p>
         <h2>Let's get started by creating a new period!</h2>
         <button>
-          <Link to="/period/new">Create a Period</Link>
+          <Link to="/period/new">Create A Period</Link>
         </button>
       </section>
     </>

@@ -93,7 +93,7 @@ const NewPeriodPageComp = () => {
             value={period.subject}
             onChange={updatePeriodObject}
           />
-          <button>Create Period</button>
+          <button>Create New Period</button>
         </form>
       </section>
     </>
