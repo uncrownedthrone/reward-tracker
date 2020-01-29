@@ -12,7 +12,7 @@ const AllPeriodsPageComp = () => {
   }
 
   const addNewPeriod = () => {
-    return <Link to="/period/new">Add New Period +</Link>
+    return
   }
 
   useEffect(() => {
@@ -34,9 +34,9 @@ const AllPeriodsPageComp = () => {
         })}
       </section>
       <section>
-        <button className="teacherPageButton" onClick={addNewPeriod}>
+        <Link className="linkButton" to="/period/new">
           Add New Period +
-        </button>
+        </Link>
       </section>
     </>
   )
